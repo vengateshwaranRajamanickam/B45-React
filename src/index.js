@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Club from "./Club";
+import A from "./cardsource.js"
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
-  <Club/>
+  <A/>
 )
-
 reportWebVitals();

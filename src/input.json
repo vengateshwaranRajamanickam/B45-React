@@ -1,0 +1,27 @@
+
+[
+{
+    "plan":"Free",
+    "value":"0",
+    "userlimit":"1",
+    "storagelimit":"50",
+    "benefit":"Unlimited Public Projects,Community Access,Unlimited Private Projects,Dedicated Phone Support,Free Subdomain,Monthly Statu Reports",
+    "limit":"1"
+},
+{
+    "plan":"Pro",
+    "value":"5",
+    "userlimit":"5",
+    "storagelimit":"50",
+    "benefit":"Unlimited Public Projects,Community Access,Unlimited Private Projects,Dedicated Phone Support,Free Subdomain,Monthly Statu Reports",
+    "limit":"5"
+},
+{
+    "plan":"Plus",
+    "value":"10",
+    "userlimit":"10",
+    "storagelimit":"150",
+    "benefit":"Unlimited Public Projects,Community Access,Unlimited Private Projects,Dedicated Phone Support,Free Subdomain,Monthly Statu Reports",
+    "limit":"6"
+}
+]
