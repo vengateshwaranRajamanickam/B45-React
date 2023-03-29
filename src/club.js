@@ -1,9 +1,9 @@
 import React from "react";
-import A from "./pricecart0";
-import B from "./pricecart1";
-import C from "./pricecart2";
+import A from "./Pricecart0";
+import B from "./Pricecart1";
+import C from "./Pricecart2";
 
-export default function display() {
+export default function Club() {
     return (
 
        <div class="row">

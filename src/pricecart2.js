@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function display() {
+export default function Pricecart2() {
     return (
       <div className="container pricing col-lg-4">
       <div className="card-body">
