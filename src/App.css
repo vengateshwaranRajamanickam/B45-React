@@ -1,0 +1,46 @@
+.card{
+   
+    background-color: aquamarine;
+    color:blue;
+    display:flexbox;
+    justify-content:center;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.text{
+    width:5rem;
+}
+.App{
+    display:flex;
+    flex-direction:column;
+    width:fit-content;
+    height: fit-content;
+    align-self:center;
+}
+.Addcard{
+    background-color: green;
+    color:white;
+}
+.Removecard{
+    background-color: peru;
+
+}
+.cardtitle{
+    text-decoration-style: wavy;
+}
+.Price{
+    width:fit-content;
+    background-color: yellow;
+}
+.Total{
+    display:inline;
+    margin-left: 75rem;
+}
+.Total1{
+    display:inline;
+}
+.heading{
+    display:inline;
+}
