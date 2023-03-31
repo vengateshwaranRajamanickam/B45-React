@@ -6,35 +6,51 @@ import Showcount from "./Showcount";
 import response from './input.json';
 import Test from './test'
 import css from './App.css';
-import Showtot from "./Showtotal";
+
 
 
 export default function Count() {
     const [count,setcount]=useState(0)
-    
-    function reset(){
-        setcount(0)
+    const [cart,setcart]=useState(response);
+    var [cartprice,setcartprice]=useState(0);
+    function reset(countrest,cartpriccerest){
+        setcount(countrest)
+        setcartprice(cartpriccerest)
+        document.getElementById("Total").innerHTML=cartprice;
     }
-    function incrementCount(price){
-    Showtot(price)
+    function incrementCount(price,id){
+        Showtot(price);
+        let index = response.findIndex(obj => obj.id === id)
+        let tempdata = response;
+        tempdata[index].isvisible = false;
+        setcart([...tempdata]);
         if(count<100)
     setcount(count+1)
     }
-    function decrementCount(){
+    function decrementCount(price,id){
+        Showtot(-Math.abs(price));
+        let index = response.findIndex(obj => obj.id === id)
+        let tempdata = response;
+        tempdata[index].isvisible = true;
+        setcart([...tempdata]);
         if(count>0)
     setcount(count-1)
     }
     function checkprice(a,id){
         return  document.getElementById(`${id}`).value=a;
     }
+    function Showtot(parameter){
+        setcartprice(cartprice+=Number(parameter));
+        document.getElementById("Total").innerHTML=cartprice;
+    }
    
     return (
 <div >
     <Showcount parameter={count} />
-    <h3 class="Total">Totalprice:</h3><h3 id="Total" class="Total1" >0</h3>
-    <Buttondec incpara={incrementCount} decpara={decrementCount} reset={reset}/>
-    <div class="App ">
-        {response.map((res,index) => ( 
+    <h2 class="Total">Totalprice:</h2><h2 id="Total" class="Totalinner">0</h2>
+    <Buttondec  reset={reset}/>
+    <div class="App">
+        {cart.map((res,index) => ( 
                        <Test
                            key={index}
                            title={res.product}
@@ -45,8 +61,10 @@ export default function Count() {
                            decpara={decrementCount}
                            price={res.price}
                            pricecallback={checkprice}
-                       />
-        ))}
+                            tool={res.isvisible}
+                           />
+                          
+                           ))}                  
         </div>
 </div>
     )

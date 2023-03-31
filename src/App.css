@@ -9,7 +9,7 @@
     margin-bottom: 10px;
     
 }
-.text{
+.Pricedisplay{
     width:5rem;
 }
 .App{
@@ -36,11 +36,21 @@
 }
 .Total{
     display:inline;
-    margin-left: 75rem;
+    margin-left: 95rem;
+    position: fixed;
 }
-.Total1{
+.Totalinner{
     display:inline;
+    position: fixed;
+    margin-left: 105rem;
 }
 .heading{
     display:inline;
+    position: fixed;
+    margin-left: 85rem;
+}
+.Reset{
+    display:inline;
+    position: fixed;
+    margin-left: 75rem
 }

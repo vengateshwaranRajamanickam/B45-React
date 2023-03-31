@@ -1,11 +1,8 @@
 import React from "react";
-export default function Buttondec({ incpara ,decpara, reset}) {
+export default function Buttondec({reset}) {
     return (
         <div>
-            <button onClick={incpara}>increment</button>
-            <button onClick={decpara}>decrement</button>
-            
-            <button onClick={reset}>Reset</button>
+            <button className="Reset" onClick={()=>reset(0,0)}>Reset</button>
         </div>
     )
 }
