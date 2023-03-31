@@ -47,7 +47,7 @@ export default function Count() {
     return (
 <div >
     <Showcount parameter={count} />
-    <h2 class="Total">Totalprice:</h2><h2 id="Total" class="Totalinner">0</h2>
+    <h2 class="Total"><i class="fa-solid fa-money-bills"></i></h2><h2 id="Total" class="Totalinner">0</h2>
     <Buttondec  reset={reset}/>
     <div class="App">
         {cart.map((res,index) => ( 
