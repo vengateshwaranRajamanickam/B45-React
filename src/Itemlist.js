@@ -1,58 +1,39 @@
 import React from 'react'
-import {ListGroup,ListGroupItem,Button} from 'reactstrap'
+import { Container, Row, Col, ListGroup, ListGroupItem, Button } from 'reactstrap'
 
-export default function Itemlist({listitem}) {
+export default function Itemlist({ para, add, remove }) {
     return (
-        <ListGroup>
-            {
-                listitem.map((value, index) => {
-                    return (<ListGroupItem key={index} color="success">
-                        {value}
-                        <Button color="danger">Delete</Button>
-                    </ListGroupItem>
-                    )
-                })}
-        </ListGroup>
-//   <ListGroupItem color="info">
-//     Dapibus ac facilisis in
-//   </ListGroupItem>
-//   <ListGroupItem color="warning">
-//     Morbi leo risus
-//   </ListGroupItem>
-//   <ListGroupItem color="danger">
-//     Porta ac consectetur ac
-    
-//     <Container>
-//     <Row>
-//     <Col
-//       className="bg-light border"
-//       sm="4"
-//       xs="6"
-//     >
-//      hjhjhlhhjh
-//      kjhkjhkjhj
-//      khkjhkjhjlh
-//      iuoiuiuiopu
-//      mn,mnbn,
+        <Container>
+            <Row>
+                <Col className='waitinglist'>
+                    <ListGroup >
+                        <h2>WaitingList</h2>
+                        {
+                                para.filter(value => value.isCompleted === false)
+                                .map((value, index) => (
+                                    <ListGroupItem key={index}>
+                                    {value.arr}
+                                    <Button className='AddList' onClick={() => add(value.id)}>Add</Button>
+                                    <Button className='RemoveList' onClick={() => remove(value.id)}>Remove </Button>
+                                    </ListGroupItem>
+                                ))
+                        }
+                        
+                    </ListGroup>
+                </Col >
+                <Col className='conformlist'>
+                    <ListGroup >
+                        <h2>conformlist</h2>
+                        {para.filter(value => value.isCompleted === true)
+                            .map((value, index) => (
+                                <ListGroupItem key={index}>
 
-//     </Col>
-//     </Row>
-//     </Container>
-//   </ListGroupItem>
-
-
+                                    {value.arr}
+                                </ListGroupItem>
+                            ))}
+                    </ListGroup>
+                </Col>
+            </Row>
+        </Container>
     )
- }
-// <Container>
-//   <Row>
-   
-//     <Col
-//       className="bg-light border"
-//       sm="4"
-//       xs="6"
-//     >
-//       .col-6 .col-sm-4
-//     </Col>
-//      </Row>
-// </Container>
-    
+}
