@@ -7,7 +7,7 @@ import Areachart  from './Areachart';
 import Piechart from './Piechart';
 import ProjecExample from './ProjectExample'
 import Colorsystem from './Colorsystem';
-import Illustration from './Illustration';
+import Illustration from './Illustration'
 import Approach from './Approach';
 import Footer from './Footer'
 import Scrolltop from './Scrolltop';
