@@ -13,6 +13,7 @@ import Footer from './Footer'
 import Scrolltop from './Scrolltop';
 import Logoutmodel from './Logoutmodel';
 import React from 'react'
+
 function HomePage() {
   return (
     <div id="wrapper">

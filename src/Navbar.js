@@ -1,15 +1,16 @@
 import React from 'react'
 
+
 export default function Navbar(){
     return (
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-            {/**/} Sidebar Toggle (Topbar) 
+            {/*Nav topbar*/}
             <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
             </button>
 
-            {/**/} Topbar Search 
+            {/*Topbar Search */} 
             <form
                 class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
@@ -23,16 +24,16 @@ export default function Navbar(){
                 </div>
             </form>
 
-            {/**/} Topbar Navbar 
+            {/* Topbar Navbar */}
             <ul class="navbar-nav ml-auto">
 
-                {/**/} Nav Item - Search Dropdown (Visible Only XS) 
+                {/* Nav Item - Search Dropdown (Visible Only XS) */}
                 <li class="nav-item dropdown no-arrow d-sm-none">
                     <a class="nav-link dropdown-toggle" href="www.guvi.com" id="searchDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-search fa-fw"></i>
                     </a>
-                    {/**/} Dropdown - Messages 
+                    {/*Dropdown - Messages */} 
                     <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                         aria-labelledby="searchDropdown">
                         <form class="form-inline mr-auto w-100 navbar-search">
@@ -50,15 +51,15 @@ export default function Navbar(){
                     </div>
                 </li>
 
-                {/**/} Nav Item - Alerts 
+                {/*Nav Item - Alerts */} 
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="www.guvi.com" id="alertsDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-bell fa-fw"></i>
-                        {/**/} Counter - Alerts 
+                        {/* Counter - Alerts */}
                         <span class="badge badge-danger badge-counter">3+</span>
                     </a>
-                    {/**/} Dropdown - Alerts 
+                    {/*Dropdown - Alerts*/}  
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="alertsDropdown">
                         <h6 class="dropdown-header">
@@ -100,7 +101,7 @@ export default function Navbar(){
                         <a class="dropdown-item text-center small text-gray-500" href="www.guvi.com">Show All Alerts</a>
                     </div>
                 </li>
-{/**/} Nav Item - Messages 
+{/* Nav Item - Messages */}
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="www.guvi.com" id="messagesDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,8 +117,8 @@ export default function Navbar(){
                         </h6>
                         <a class="dropdown-item d-flex align-items-center" href="www.guvi.com">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                    alt="..."/>
+                                <img class="rounded-circle" src="./img/"
+                                    alt=""/>
                                     <div class="status-indicator bg-success"></div>
                             </div>
                             <div class="font-weight-bold">
@@ -128,7 +129,7 @@ export default function Navbar(){
                         </a>
                         <a class="dropdown-item d-flex align-items-center" href="www.guvi.com">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                <img class="rounded-circle" src="./img/undraw_profile_2.svg"
                                     alt="..."/>
                                     <div class="status-indicator"></div>
                             </div>
@@ -168,15 +169,15 @@ export default function Navbar(){
 
                 <div class="topbar-divider d-none d-sm-block"></div>
 
-                {/**/} Nav Item - User Information 
+                {/* Nav Item - User Information */}
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="www.guvi.com" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                         <img class="img-profile rounded-circle"
-                            src="img/undraw_profile.svg" alt=""/>
+                            src="./img/undraw_profile.svg" alt=""/>
                     </a>
-                    {/**/} Dropdown - User Information 
+                    {/*Dropdown - User Information */} 
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="www.guvi.com">
