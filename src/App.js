@@ -13,6 +13,8 @@ import Footer from './Footer'
 import Scrolltop from './Scrolltop';
 import Logoutmodel from './Logoutmodel';
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashtopbar from './Dashtopbar';
 
 function HomePage() {
   return (
@@ -21,11 +23,7 @@ function HomePage() {
       <div id="content-wrapper" class="d-flex flex-column">
         <div id="content"><Navbar /></div>
         <div class="container-fluid">
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="wwww.guvi.com" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-              class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
+          <Dashtopbar/>
 
           <div class="row">
             <Earningmonthlyrow />

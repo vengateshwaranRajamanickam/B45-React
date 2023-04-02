@@ -1,8 +1,11 @@
 import React from 'react'
+import image1 from './img/undraw_posting_photo.svg'
+//import Profilephoto  from './img/11.jpg'
 
 
 export default function Navbar(){
     return (
+       
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
             {/*Nav topbar*/}
@@ -117,8 +120,8 @@ export default function Navbar(){
                         </h6>
                         <a class="dropdown-item d-flex align-items-center" href="www.guvi.com">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="./img/"
-                                    alt=""/>
+                                {/* <Profilephoto/> */}
+                                <img src={"./img/undraw_posting_photo.svg"} alt="My SVG" />
                                     <div class="status-indicator bg-success"></div>
                             </div>
                             <div class="font-weight-bold">
@@ -129,7 +132,7 @@ export default function Navbar(){
                         </a>
                         <a class="dropdown-item d-flex align-items-center" href="www.guvi.com">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="./img/undraw_profile_2.svg"
+                                <img class="rounded-circle" src={image1}
                                     alt="..."/>
                                     <div class="status-indicator"></div>
                             </div>
@@ -201,7 +204,7 @@ export default function Navbar(){
                 </li>
 
             </ul>
+    </nav>
 
-        </nav>
-)
+       )
 }
