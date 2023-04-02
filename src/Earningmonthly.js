@@ -49,7 +49,7 @@ export default function Earningmonthly() {
                                     <div class="col">
                                         <div class="progress progress-sm mr-2">
                                             <div class="progress-bar bg-info" role="progressbar"
-                                               style={{ width: "40%" }} aria-valuenow="40" aria-valuemin="0"
+                                               style={{ width: "50%" }} aria-valuenow="45" aria-valuemin="0"
                                                 aria-valuemax="100"></div>
                                         </div>
                                     </div>
