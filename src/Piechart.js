@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCircle} from '@fortawesome/free-solid-svg-icons'
+//import {ellipsis} from '@fortawesome/free-thin-svg-icons-svg-icons'
 export default function Piechart(){
     return (
 <div class="col-xl-4 col-lg-5">
@@ -11,7 +13,7 @@ export default function Piechart(){
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="www.guvi.com" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                 <FontAwesomeIcon icon={faCircle} />
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
@@ -30,13 +32,13 @@ export default function Piechart(){
                                     </div>
                                     <div class="mt-4 text-center small">
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
+                                        <FontAwesomeIcon icon={faCircle} style={{color: "#0000FF",}} /> Direct
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
+                                        <FontAwesomeIcon icon={faCircle} style={{color: "#bb30af",}} />Social
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
+                                        <FontAwesomeIcon icon={faCircle} style={{color: "#00FFFF",}} /> Referral
                                         </span>
                                     </div>
                                 </div>

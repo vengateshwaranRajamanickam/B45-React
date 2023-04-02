@@ -37,8 +37,11 @@ function HomePage() {
           </div>
           <div class="row">
             <div class="col-lg-6 mb-4">
-              <ProjecExample><Colorsystem /></ProjecExample>
-              <Illustration><Approach /></Illustration>
+              <ProjecExample/><Colorsystem />
+              </div>
+              <div class="col-lg-6 mb-4">
+              <Illustration></Illustration>
+              <Approach />
             </div>
           </div>
 

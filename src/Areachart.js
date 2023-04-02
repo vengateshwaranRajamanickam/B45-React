@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCircle} from '@fortawesome/free-solid-svg-icons'
 export default function Areachart(){
     return (
 // Area Chart 
@@ -12,7 +13,7 @@ export default function Areachart(){
             <div class="dropdown no-arrow">
                 <a class="dropdown-toggle" href="www.guvi.com" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                       <FontAwesomeIcon icon={faCircle} />
                 </a>
                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                     aria-labelledby="dropdownMenuLink">
