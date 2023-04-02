@@ -14,6 +14,7 @@ export default function Approach(){
                                         Bootstrap framework, especially the utility classes.</p>
                                 </div>
                             </div>
+                          
     )
 }
 

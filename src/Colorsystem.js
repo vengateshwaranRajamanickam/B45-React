@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Colorsystem(){
     return (
+       
 <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
@@ -68,7 +69,6 @@ export default function Colorsystem(){
                                     </div>
                                 </div>
                             </div>
-
-                     
+       
     )
 }
