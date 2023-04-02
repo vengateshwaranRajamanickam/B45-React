@@ -1,5 +1,5 @@
 
-import css from './App.css';
+
 import Slidebar from './Slidebar'
 import Navbar from './Navbar'
 import Footer from './Footer'

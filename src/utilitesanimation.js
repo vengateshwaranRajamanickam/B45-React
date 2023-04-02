@@ -3,6 +3,7 @@ import Slidebar from './Slidebar'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Scrolltop from './Scrolltop'
+import Animationtopbar from './Animationtopbar'
 
 export default function Utilitiesanimation(){
     return (
@@ -13,7 +14,7 @@ export default function Utilitiesanimation(){
                 <div class="container-fluid">
                     <Animationtopbar />
                     <div class="row">
-                       <Animation/>
+                      
                     </div>
                 </div>
                 <Footer />
