@@ -5,6 +5,7 @@ import Homepage from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'  
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
