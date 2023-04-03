@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 export default function CreateUsers(){
   const nav = useNavigate();
   const [user, setUser] = useState({});
+  return(
         <div  className='EditUser'>
     <Container>       
         <Form>
