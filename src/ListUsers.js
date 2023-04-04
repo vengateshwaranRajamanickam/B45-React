@@ -1,7 +1,7 @@
 import React from "react";
 import { useState,useEffect } from 'react'
 import ListUsersCard from "./ListUsersCard";
-import { Container } from 'reactstrap'
+import { Container,Row} from 'reactstrap'
 
 export default function Listusers() {
     const [UserData, setUserData] = useState([]);
@@ -10,14 +10,16 @@ export default function Listusers() {
     })
     return (
         <Container>
-             <div class="row">
+             <Row >
             {
                 UserData.map((value,index)=>
-                    <ListUsersCard key={index} data={value} />
                    
+                    <ListUsersCard key={index} data={value} />
+                  
                 )
             }
-            </div><br></br>
-        </Container>
+           
+    </Row>
+          </Container>
     )
 }

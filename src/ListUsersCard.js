@@ -1,10 +1,11 @@
 import React from 'react'
-import {CardBody,Card,CardSubtitle,CardTitle,Button,CardText } from 'reactstrap'
+import {Row,CardBody,Card,CardSubtitle,CardTitle,Button,CardText,Col} from 'reactstrap'
 import {useNavigate} from 'react-router-dom'
 export default function ListUsersCard({data}){
   const nav=useNavigate();
     return(
-      <div class="col-lg-6 mb-4">
+     
+        <Col xs={12} sm={8} md={6} lg={6}>
         <Card
   style={{
     width: '18rem'
@@ -33,8 +34,9 @@ export default function ListUsersCard({data}){
         EditUserinfo
         </Button>
   </CardBody>
-</Card>
-</div>
+</Card><br></br>
+</Col>
+
     )
 
 }
