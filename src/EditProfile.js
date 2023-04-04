@@ -54,8 +54,8 @@ export default function EditProfile({data}){
       <div>{user.image}</div>
       <Input
         id="exampleFile"
-        name="file"
-        type="file"accept="image/jpeg"
+        name="image"
+        type="text"accept="image/jpeg"
       />
       <FormText>
         Upload only .jpg
