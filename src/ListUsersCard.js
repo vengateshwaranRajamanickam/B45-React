@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row,CardBody,Card,CardSubtitle,CardTitle,Button,CardText,Col} from 'reactstrap'
+import {CardBody,Card,CardSubtitle,CardTitle,Button,CardText,Col} from 'reactstrap'
 import {useNavigate} from 'react-router-dom'
 export default function ListUsersCard({data}){
   const nav=useNavigate();

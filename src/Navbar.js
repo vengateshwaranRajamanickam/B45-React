@@ -10,17 +10,17 @@ function NavbarTopbar(props) {
   return (
     <Nav tabs>
       <NavItem>
-        <NavLink>
-        <Link to="/">Users</Link> </NavLink >
+        <NavLink >
+        <Link  to="/">Users</Link> </NavLink >
       </NavItem>
       <NavItem>
-      <NavLink ><Link to="/Profile">Profile</Link> </NavLink >
+      <NavLink><Link to="/Profile">Profile</Link> </NavLink >
       </NavItem>
-      <NavItem>
+      <NavItem >
       <NavLink ><Link to="/CreateUsers">CreateProfile</Link> </NavLink >
       </NavItem>
     </Nav>
   );
 }
-
+//onClick={NavLink.className.add("active")}
 export default NavbarTopbar;

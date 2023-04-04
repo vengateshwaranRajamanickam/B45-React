@@ -54,8 +54,7 @@ export default function EditUsers({data}){
         type="firstname"
         onChange={handleChange}
         value={user.firstname}
-        />{
-    }
+        />
     </Col>
   </FormGroup>
   <FormGroup row>
