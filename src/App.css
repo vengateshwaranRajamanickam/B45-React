@@ -5,11 +5,15 @@
   background-size: cover;
   background-repeat:repeat-y;
   }
-  .EditUser{
+  .Background{
     height: 100%;
     padding-top: 10%;
-    padding-bottom:  21%;
+    padding-bottom:  22%;
     justify-content:center;
     background-clip: border-box;
+  }
+  .Back{
+    justify-content:center;
+    align-items:center;
   }
   

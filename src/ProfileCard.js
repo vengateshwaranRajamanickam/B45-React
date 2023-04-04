@@ -1,11 +1,11 @@
 import React from 'react'
-import {CardBody,Card,ListGroup,CardTitle,CardLink,CardText,ListGroupItem,Button } from 'reactstrap'
+import {CardBody,Card,ListGroup,CardTitle,Col,CardText,ListGroupItem,Button } from 'reactstrap'
 import { useNavigate } from "react-router-dom";
 
 export default function ListUsersCard({data}){
     const nav=useNavigate();
     return(
-        <div class="col-lg-2 mb-4 ">
+      <Col xs={12} sm={8} md={6} lg={6}>
         <Card
         style={{
           width: '18rem'
@@ -39,8 +39,8 @@ export default function ListUsersCard({data}){
         EditProfile
         </Button>
         </CardBody>
-      </Card>
-      </div>
+      </Card><br></br>
+      </Col>
     )
 
 }

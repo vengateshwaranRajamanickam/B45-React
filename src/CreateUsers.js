@@ -2,12 +2,45 @@ import React from 'react'
 import {Form,FormGroup,Label,Input,FormText,Button,Container,Col} from 'reactstrap'
 import { useState,useEffect } from 'react'
 import {useNavigate} from 'react-router-dom'
+let initialValue = {
+  lastname: "",
+  firstname: "",
+  emailid: "",
+  phonenumber: "",
+  gender:"",
+  location: "",
+  image: "",
+  id:0
+};
 export default function CreateUsers(){
   const nav = useNavigate();
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(initialValue);
+
+  const handleChange = (e) => {
+    if (e.target.type === "number") {
+      setUser({ ...user, [e.target.name]: parseInt(e.target.value) });
+    }
+    else if  (e.target.type === "file") {
+      setUser({ ...user, [e.target.name]: e.target.value });
+    }
+    else{
+      setUser({ ...user, [e.target.name]: e.target.value });
+    }
+  };
+  const handleSubmit = () => {
+  
+    fetch("https://640f08d74ed25579dc43acce.mockapi.io/users/",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    })
+   
+};
   return(
-        <div  className='EditUser'>
-    <Container>       
+      <div  className='CreateUser Background'>
+   <Container>       
         <Form>
         <FormGroup row>
     <Label
@@ -17,17 +50,20 @@ export default function CreateUsers(){
       Profile pic
     </Label>
     <Col sm={10}>
+      <div>{user.image}</div>
       <Input
         id="exampleFile"
-        name="file"
-        type="file"accept="image/jpeg"
+        name="image"
+        type="text"
+        accept='image/.jpg'
+        onChange={handleChange}
       />
       <FormText>
-        Upload only .jpg
+       Paste Imaeg URL     *only.jpg
       </FormText>
     </Col>
-  </FormGroup>
-        <FormGroup row>
+    </FormGroup>
+    <FormGroup row>
     <Label
       for="Firstname"
       sm={2}
@@ -36,12 +72,13 @@ export default function CreateUsers(){
     </Label>
     <Col sm={10}>
       <Input
-        id="Firstname"
+        id="firstname"
         name="firstname"
         placeholder="Firstname"
         type="firstname"
-        value=""
-        ></Input>{
+        onChange={handleChange}
+        value={user.firstname}
+        />{
     }
     </Col>
   </FormGroup>
@@ -54,11 +91,12 @@ export default function CreateUsers(){
     </Label>
     <Col sm={10}>
       <Input
-        id="Lastname"
-        name="Lastname"
+        id="lastname"
+        name="lastname"
         placeholder="Lastname"
-        type="Lastname"
-        value=""
+        type="lastname"
+        onChange={handleChange}
+        value={user.lastname}
         ></Input>
     </Col>
   </FormGroup>
@@ -72,11 +110,12 @@ export default function CreateUsers(){
     </Label>
     <Col sm={10}>
     <Input
-        id="Emailid"
+        id="emailid"
         name="emailid"
-        placeholder="Emailid"
-        type="Emailid"
-        value=""
+        placeholder="Email id"
+        type="emailid"
+        onChange={handleChange}
+        value={user.emailid}
         ></Input>
     </Col>
     </FormGroup>
@@ -89,22 +128,23 @@ export default function CreateUsers(){
     </Label>
     <Col sm={10}>
     <Input
-        id="Phonenumber"
+        id="phonenumber"
         name="phonenumber"
         placeholder="Phonenumber"
-        type="Phonenumber"
-        value=""
+        type="phonenumber"
+        onChange={handleChange}
+        value={user.phonenumber}
         ></Input>
     </Col>
   </FormGroup>
   <FormGroup>
     <Col sm={10}>
-      <Button>
-        Submit
-      </Button>
+      <Button color="info" onClick={handleSubmit}>Submit
+     </Button>
     </Col>
   </FormGroup>
 </Form>
+<Button className='Back' color="primary" onClick={() => nav("/Profile")}>Back</Button>
 </Container>
 </div>
   )
