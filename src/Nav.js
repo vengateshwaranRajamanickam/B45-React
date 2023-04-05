@@ -4,17 +4,19 @@ import {
   Nav,
   NavItem,
   NavLink,
+
 } from 'reactstrap';
 
 export default function NavTopbar() {
   return (
     <Nav tabs>
       <NavItem>
-        <NavLink >
-        <Link  to="/">Students</Link> </NavLink >
+      <NavLink tag={Link} to="/" exact activeClassName="active">
+</NavLink>
       </NavItem>
       <NavItem>
-      <NavLink> <Link  to="/Teacher">Teacher</Link></NavLink >
+      <NavLink tag={Link} to="/teacher" activeClassName="active">
+      </NavLink>
       </NavItem>
       <NavItem >
       <NavLink disabled>Admin</NavLink >
