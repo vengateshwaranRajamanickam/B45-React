@@ -1,27 +1,35 @@
-import React, { useContext } from "react";
 import Teachercard from './Teachercard'
 import Teacherdetails from './Teacherdetail'
 import { Row,Col } from 'reactstrap'
-import Datacontext from './Context'
+import { useEffect,useState } from "react";
+
 export default function Listusers() {
-const context =useContext(Datacontext)
+    const [UserData,setUserData]=useState([]) 
+    const [inputarray,setinputarray]=useState([]) 
+    useEffect(()=>{
+    fetch('https://640f08d74ed25579dc43acce.mockapi.io/amazon').then(res=>res.json()).then(val=>setUserData(val))
+    },[])
+    function AddList(id) {
+        let tempTodos = UserData[id - 1];
+        setinputarray([tempTodos])
+    }
     return (
        
             <Row className="teacherpage">
-                <Col xs={12} sm={ context.inputarray.length === 0 ? 12 : 8} md={context.inputarray.length === 0 ? 12 : 6}>
+                <Col xs={12} sm={ inputarray.length === 0 ? 12 : 8} md={inputarray.length === 0 ? 12 : 6}>
                     {
-                        context.UserData.map((value, index) =>
+                        UserData.map((value, index) =>
                             <>
-                                < Teachercard key={index} data={value} add={context.AddList} />
+                                < Teachercard key={index} data={value} add={AddList} />
                                 <br />
                             </>
                         )
                     }
 
                 </Col>
-                <Col xs={12} sm={context.inputarray.length === 0 ? 12 : 8}  md={context.inputarray.length === 0 ? 0: 6}>
+                <Col xs={12} sm={inputarray.length === 0 ? 12 : 8}  md={inputarray.length === 0 ? 0: 6}>
                 {
-                    context.inputarray.map((value, index) => (
+                    inputarray.map((value, index) => (
                         < Teacherdetails key={index} details={value} />
                     ))
                 }
