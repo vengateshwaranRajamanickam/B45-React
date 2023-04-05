@@ -11,7 +11,7 @@ export default function NavbarTopbar() {
     <Nav tabs>
       <NavItem>
         <NavLink >
-        <Link  to="/">Students</Link> </NavLink >
+        <Link  to="/st">Students</Link> </NavLink >
       </NavItem>
       <NavItem>
       <NavLink><Link to="/Profile">Teacher</Link> </NavLink >
