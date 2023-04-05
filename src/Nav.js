@@ -17,6 +17,9 @@ export default function NavTopbar() {
       <NavItem>
       <NavLink ><Link  to="/teacher">Teacher</Link>      </NavLink>
       </NavItem>
+      <NavItem>
+      <NavLink ><Link  to="/register">Register Student/Teacher</Link>      </NavLink>
+      </NavItem>
       <NavItem >
       <NavLink disabled>Admin</NavLink >
       </NavItem>

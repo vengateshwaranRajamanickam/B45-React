@@ -1,8 +1,9 @@
 import React from 'react'
-import {Input, CardBody, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
+import {Button,Input, CardBody,Container, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
 
-export default function Teacherdetail ({details}) {
+export default function Teacherdetail ({details,reset,deletefile, Updatedetail}) {
     return (
+        <>
         <Card  className='teacherdetailcard'
             >
                 <CardBody>
@@ -12,7 +13,7 @@ export default function Teacherdetail ({details}) {
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
-                    >    Department:{details.teacherdepartment}
+                    >    Department:{details.teacherdepartment}<Button className='Deletefile' color="danger" onClick={()=>deletefile(details.id)}>Delete</Button>
                     </CardSubtitle>
                     <CardText>
                     Teacher Id:{details.teacherid}
@@ -23,15 +24,26 @@ export default function Teacherdetail ({details}) {
                     <CardText>
                     Join Date: 04/04/2023
                     </CardText>
-                    <div>College administration Comment:</div>
+                    <div>College administration Comment/Feedback:</div><br/>
+                    <Container className='commentoutline'>
+                   <Container className='comment'>{details.teachercomment}</Container>
+                    </Container><br/>
                     <InputGroup>
-                        <Input>
+                   
+                        <Input 
+                         id=""
+                         name="firstname"
+                         placeholder="teachercomment"
+                         type="text" onChange={(e)=>details.teachercomment=e.target.value}>
                         </Input>
                      </InputGroup>
-                    <br />
-                </CardBody>
-            </Card>  
-       
+                    </CardBody>
+                    <Button color="info" onClick={()=>Updatedetail(details)} >Submit Comment</Button>
+            </Card> 
+            <Button color="primary" onClick={()=>reset(0)}>
+            Back
+          </Button>
+    </>
     )
 
 }

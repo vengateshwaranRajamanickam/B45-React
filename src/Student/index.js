@@ -12,7 +12,7 @@ export default function Student(){
                     {
                         context.UserData.map((value, index) =>
                             <>
-                                <Studentcard key={index} data={value} add={context.AddList} />
+                                <Studentcard key={index} data={value} add={context.Showdetail} />
                                 <br />
                             </>
                         )
@@ -22,7 +22,7 @@ export default function Student(){
                 <Col xs={12} sm={context.inputarray.length === 0 ? 12 : 8}  md={context.inputarray.length === 0 ? 0: 6}>
                 {
                     context.inputarray.map((value, index) => (
-                        < Studentdetail key={index} details={value} />
+                        < Studentdetail key={index} details={value} reset={context.Showdetail} deletefile={context.Deletedetail} Updatedetail={context.Updatedetail}/>
                     ))
                 }
                 </Col>

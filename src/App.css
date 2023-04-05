@@ -38,7 +38,28 @@ justify-content: center;
   box-shadow: 1px 1px 5px 1px lightslategray;
 
 }
-.body{
-  background-color:red;
+.Showdetails{
+  float: right;
 }
+.Deletefile{
+  float: right;
+}
+.comment{
+  text-align: center;
+  background-color:white;
+  margin-top: 1rem;
+  height:2.5rem;
+ box-sizing: border-box;
+ border-radius: 3px;
+ 
+}
+.commentoutline{
+  border:0.5px solid white;
+  border-radius: 3px;
+  min-width: 5px;
+  min-height: 5rem;
+  background-color:antiquewhite;
+  box-shadow: 1px 1px 5px 1px lightslategray;
+}
+
 

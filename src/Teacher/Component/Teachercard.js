@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,  CardBody, Card, CardSubtitle, CardTitle, CardText} from 'reactstrap'
+import {Container,  CardBody, Card, CardSubtitle, Button,CardTitle, CardText} from 'reactstrap'
 
 export default function Teachercard({ data, add }) {
     return (
@@ -11,7 +11,7 @@ export default function Teachercard({ data, add }) {
             >
                 <CardBody onClick={() => add(data.id)}>
                     <CardTitle tag="h5">
-                    Name:{data.teachername}
+                    Name:{data.teachername}<Button className='Showdetails' color="info">Show Details</Button>
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
