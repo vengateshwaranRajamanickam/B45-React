@@ -1,19 +1,17 @@
 import React from 'react'
-import { Container,Row, CardBody, Card, CardSubtitle, CardTitle, Button, CardText, Col } from 'reactstrap'
-import { useNavigate } from 'react-router-dom'
-export default function ListUsersCard({ data ,add}) {
-    const nav = useNavigate();
+import {Container,  CardBody, Card, CardSubtitle, CardTitle, CardText} from 'reactstrap'
+
+export default function ListUsersCard({ data, add }) {
     return (
-        <Col  xs={12} >
-            
-            <Card 
+        <Container className="p1">
+        <Card  className='studentcard'
                 style={{
-                    width: '18rem'
+                    border:"none"
                 }}
             >
                 <CardBody onClick={() => add(data.id)}>
                     <CardTitle tag="h5">
-                    Rank:{data.rank}
+                        Rank:{data.rank}
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
@@ -24,12 +22,10 @@ export default function ListUsersCard({ data ,add}) {
                     <CardText>
                         Studentid:{data.studentid}
                     </CardText>
-                    
                 </CardBody>
             </Card>
-            <br />
-           
-        </Col>
+            </Container>
+      
     )
 
 }

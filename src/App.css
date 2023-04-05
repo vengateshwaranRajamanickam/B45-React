@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
-}
+.studentcard{
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 40rem;
+  box-shadow: 1px 1px 5px 1px lightslategray;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
+.studentdetailcard{
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 50rem;
+  box-shadow: 1px 1px 5px 1px lightslategray;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Studentpage{
+  background-image:url(https://registration.srmrmp.edu.in/downloads/63abc934c2762204375602_6209f6a8ef936808790290_banner.png)
+}
+.p1{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
