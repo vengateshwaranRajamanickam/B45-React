@@ -15,7 +15,7 @@ export default function Provider(props) {
     return (
        
         <Context.Provider value={{ UserData, inputarray, AddList }}>
-            {props.childern}
+            {props.children}
         </Context.Provider>
        
     )

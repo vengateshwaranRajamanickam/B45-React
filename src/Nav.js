@@ -11,12 +11,11 @@ export default function NavTopbar() {
   return (
     <Nav tabs>
       <NavItem>
-      <NavLink tag={Link} to="/" exact activeClassName="active">
-</NavLink>
+      <NavLink><Link  to="/">Student</Link>
+      </NavLink>
       </NavItem>
       <NavItem>
-      <NavLink tag={Link} to="/teacher" activeClassName="active">
-      </NavLink>
+      <NavLink ><Link  to="/teacher">Teacher</Link>      </NavLink>
       </NavItem>
       <NavItem >
       <NavLink disabled>Admin</NavLink >

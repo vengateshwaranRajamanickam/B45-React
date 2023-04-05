@@ -11,16 +11,16 @@ export default function Teachercard({ data, add }) {
             >
                 <CardBody onClick={() => add(data.id)}>
                     <CardTitle tag="h5">
-                        Rank:{data.rank}
+                    Name:{data.teachername}
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Name:{data.name}
+                        Department:{data.teacherdepartment}
                     </CardSubtitle>
                     <CardText>
-                        Studentid:{data.studentid}
+                        Teacherid:{data.teacherid}
                     </CardText>
                 </CardBody>
             </Card>
