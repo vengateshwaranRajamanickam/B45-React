@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Row,Col,Container,Label,Form,FormGroup,Input,FormText,Button  } from 'reactstrap';
 import Context from '../Context';
 import { useNavigate } from 'react-router-dom'
-export default function Student(){
+export default function Register(){
     const context=useContext (Context);
     const nav=useNavigate();
     return (
@@ -14,17 +14,17 @@ export default function Student(){
    
   <FormGroup row>
   <Label
-    for="Firstname"
+    for="Name"
     sm={2}
   >
-    Firstname
+    Name
   </Label>
   <Col sm={10}>
     <Input
-      id="firstname"
-      name="firstname"
-      placeholder="Firstname"
-      type="firstname"
+      id="name"
+      name="name"
+      placeholder="Name"
+      type="text"
       //onChange={}
       value=""
       />{
@@ -33,17 +33,17 @@ export default function Student(){
 </FormGroup>
 <FormGroup row>
   <Label
-    for="Lastname"
+    for="Student id"
     sm={2}
   >
-    Lastname
+    Student id
   </Label>
   <Col sm={10}>
     <Input
-      id="lastname"
-      name="lastname"
-      placeholder="Lastname"
-      type="lastname"
+      id="student id"
+      name="student id"
+      placeholder="Student id"
+      type="number"
      // onChange={}
      // value={}
       ></Input>
@@ -51,36 +51,18 @@ export default function Student(){
 </FormGroup>
 
 <FormGroup row>
-  <Label
-    for="exampleText"
-    sm={2}
-  >
-  Email id
-  </Label>
-  <Col sm={10}>
-  <Input
-      id="emailid"
-      name="emailid"
-      placeholder="Email id"
-      type="emailid"
-      //onChange={handleChange}
-      //value={user.emailid}
-      ></Input>
-  </Col>
-  </FormGroup>
-<FormGroup row>
 <Label
     for="exampleText"
     sm={2}
   >
-  Phone 
+ Rank 
   </Label>
   <Col sm={10}>
   <Input
-      id="phonenumber"
-      name="phonenumber"
-      placeholder="Phonenumber"
-      type="phonenumber"
+      id="rank"
+      name="rank"
+      placeholder="Rank"
+      type="number"
     //  onChange={handleChange}
      // value={user.phonenumber}
       ></Input>
