@@ -1,33 +1,29 @@
 import React from 'react'
 import {Input, CardBody, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
 
-export default function ListUsersCard({details}) {
+export default function Teacherdetails({details}) {
     return (
-        <Card  className='studentdetailcard'
+        <Card  className='teacherdetailcard'
             >
                 <CardBody>
                     <CardTitle tag="h5">
-                   All India Rank:{details.rank}
+                    Registered Name:{details.teachername}
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
-                    >
-                       Registered Name:{details.name}
+                    >    Department:{details.teacherdepartment}
                     </CardSubtitle>
                     <CardText>
-                       Studentid:{details.studentid}
+                    Teacher Id:{details.teacherid}
                     </CardText>
                     <CardText>
-                    Civil Services Examination
+                    Grade:II
                     </CardText>
                     <CardText>
-                    Exam date: 04/04/2023
+                    Join Date: 04/04/2023
                     </CardText>
-                    <CardText>
-                       Examcenter:{details.examcenter}
-                    </CardText>
-                    <div>Teacher Comment:</div>
+                    <div>College administration Comment:</div>
                     <InputGroup>
                         <Input>
                         </Input>

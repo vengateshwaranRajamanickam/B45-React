@@ -1,26 +1,26 @@
 import React from 'react'
 import {Container,  CardBody, Card, CardSubtitle, CardTitle, CardText} from 'reactstrap'
 
-export default function ListUsersCard({ data, add }) {
+export default function TeacherCard({ data, add }) {
     return (
         <Container className="p1">
-        <Card  className='studentcard'
+        <Card  className='teachercard'
                 style={{
                     border:"none"
                 }}
             >
                 <CardBody onClick={() => add(data.id)}>
                     <CardTitle tag="h5">
-                        Rank:{data.rank}
+                    Name:{data.teachername}
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Name:{data.name}
+                        Department:{data.teacherdepartment}
                     </CardSubtitle>
                     <CardText>
-                        Studentid:{data.studentid}
+                        Teacherid:{data.teacherid}
                     </CardText>
                 </CardBody>
             </Card>

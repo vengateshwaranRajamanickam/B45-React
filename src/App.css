@@ -3,7 +3,7 @@
   border-radius: 3px;
   width: 40rem;
   box-shadow: 1px 1px 5px 1px lightslategray;
-
+  margin-top: 2rem;
 }
 .studentdetailcard{
   box-sizing: border-box;
@@ -12,12 +12,31 @@
   box-shadow: 1px 1px 5px 1px lightslategray;
 
 }
-.Studentpage{
-  background-image:url(https://registration.srmrmp.edu.in/downloads/63abc934c2762204375602_6209f6a8ef936808790290_banner.png)
+.studentpage{
+  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
+  background-size:contain;
 }
 .p1{
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+}
+.teacherpage{
+  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
+  background-size:contain;
+}
+.teachercard{
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 40rem;
+  box-shadow: 1px 1px 5px 1px lightslategray;
+  margin-top: 2rem;
+}
+.teacherdetailcard{
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 50rem;
+  box-shadow: 1px 1px 5px 1px lightslategray;
+
 }
 
 
