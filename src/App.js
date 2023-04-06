@@ -4,9 +4,9 @@ import React from 'react'
 import Student from './Student';
 import Teacher from './Teacher'
 import Provider from './Provider';
-import Register from './Register';
-import Registerteacher from './Registerteacher'
+import Register from './Register'
 import Nav from './Nav';
+import Registerteacher from './Registerteacher'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 

@@ -29,4 +29,3 @@ export default function NavTopbar() {
     </Nav>
   );
 }
-//onClick={NavLink.className.add("active")}

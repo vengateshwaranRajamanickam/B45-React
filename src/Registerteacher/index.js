@@ -34,7 +34,7 @@ export default function Register(){
     for="exampleText"
     sm={2}
   >
- Teacherdepartment 
+ Teacher department 
   </Label>
   <Col sm={10}>
   <Input
@@ -49,7 +49,7 @@ export default function Register(){
 </FormGroup>
 <FormGroup>
   <Col sm={10}>
-    <Button color="info" onClick={context.TeacherCreatedetail}>Submit
+    <Button color="info" onClick={context.Createdetail}>Submit
    </Button>
   </Col>
 </FormGroup>

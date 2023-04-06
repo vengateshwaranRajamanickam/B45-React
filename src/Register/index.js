@@ -70,7 +70,7 @@ export default function Register(){
 </FormGroup>
 <FormGroup>
   <Col sm={10}>
-    <Button color="info" onClick={context.StudentCreatedetail}>Submit
+    <Button color="info" onClick={context.Createdetail}>Submit
    </Button>
   </Col>
 </FormGroup>

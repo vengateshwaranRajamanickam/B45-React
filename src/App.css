@@ -20,18 +20,6 @@
 display: flex;
 justify-content: center;
 }
-.registerpage{
-  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
-  background-size:contain; 
-  background-repeat: no-repeat;
-  background-position: 2rem 0rem;
-}
-.registerteacherpage{
-  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
-  background-size:contain; 
-  background-repeat: no-repeat;
-  background-position: 2rem 0rem;
-}
 .teacherpage{
   background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
   background-size:contain;
@@ -73,5 +61,3 @@ justify-content: center;
   background-color:antiquewhite;
   box-shadow: 1px 1px 5px 1px lightslategray;
 }
-
-

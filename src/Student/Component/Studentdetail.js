@@ -1,7 +1,7 @@
 import React from 'react'
-import {Input,Button, CardBody, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
+import {Input,Button,Container, CardBody, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
 
-export default function Studentdetail({details,reset,Updatedetail}) {
+export default function Studentdetail({details,reset,deletefile,Updatedetail}) {
    
     return (
         <>
@@ -14,7 +14,7 @@ export default function Studentdetail({details,reset,Updatedetail}) {
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                       Registered Name:{details.name}
+                       Registered Name:{details.name}<Button className='Deletefile' color="danger" onClick={()=>deletefile(details.id)}>Delete</Button>
                     </CardSubtitle>
                     <CardText>
                        Studentid:{details.studentid}
@@ -28,27 +28,26 @@ export default function Studentdetail({details,reset,Updatedetail}) {
                     <CardText>
                        Examcenter:{details.examcenter}
                     </CardText>
-                    <div>Teacher Comment/Feedback:</div>
-                    <div >{details.comment}</div>
+                    <div>College administration Comment/Feedback:</div><br/>
+                    <Container className='commentoutline'>
+                   <Container className='comment'>{details.comment}</Container>
+                    </Container><br/>
                     <InputGroup>
                    
-                    {/* <Input 
+                        <Input 
                          id=""
                          name="firstname"
-                         placeholder="comment"
+                         placeholder="teachercomment"
                          type="text" onChange={(e)=>details.comment=e.target.value}>
-                           </Input> */}
+                        </Input>
                      </InputGroup>
-                     </CardBody>
-                     <Button color="primary"  onClick={()=>Updatedetail(details)}>Submit Comment</Button>
-                </Card>  
-              
+                    </CardBody>
+                    <Button color="info" onClick={()=>Updatedetail(details)} >Submit Comment</Button>
+            </Card> 
                 <Button color="primary"  onClick={()=>reset(0)}>
                 Back
               </Button>
               </>
        
     )
-
-}
-//<Button className='Deletefile' color="danger" onClick={()=>deletefile(details.id)}>Delete</Button>
+    }
