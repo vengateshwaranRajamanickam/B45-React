@@ -6,44 +6,23 @@ export default function Register(){
     const context=useContext (Context);
     const nav=useNavigate();
     return (
-   <div  className="registerpage">
+   <div  className="registerteacherpage">
  <Container>       
       <Form>
       
- 
-   
-  <FormGroup row>
-  <Label
-    for="Name"
-    sm={2}
-  >
-    Name
-  </Label>
-  <Col sm={10}>
-    <Input
-      id="name"
-      name="name"
-      placeholder="Name"
-      type="text"
-      onChange={context.handleChange}
-      //value=""
-      />{
-  }
-  </Col>
-</FormGroup>
 <FormGroup row>
   <Label
-    for="Student id"
+    for="Teachername"
     sm={2}
   >
-    Student id
+    Teachername
   </Label>
   <Col sm={10}>
     <Input
-      id="student id"
-      name="student id"
-      placeholder="Student id"
-      type="number"
+      id="teachername"
+      name="teachername"
+      placeholder="Teachername"
+      type="text"
       onChange={context.handleChange}
      // value={}
       ></Input>
@@ -55,14 +34,14 @@ export default function Register(){
     for="exampleText"
     sm={2}
   >
- Rank 
+ Teacherdepartment 
   </Label>
   <Col sm={10}>
   <Input
-      id="rank"
-      name="rank"
-      placeholder="Rank"
-      type="number"
+      id="teacherdepartment"
+      name="teacherdepartment"
+      placeholder="Teacherdepartment"
+      type="text"
     onChange={context.handleChange}
      //value={user.phonenumber}
       ></Input>
@@ -70,7 +49,7 @@ export default function Register(){
 </FormGroup>
 <FormGroup>
   <Col sm={10}>
-    <Button color="info" onClick={context.StudentCreatedetail}>Submit
+    <Button color="info" onClick={context.TeacherCreatedetail}>Submit
    </Button>
   </Col>
 </FormGroup>

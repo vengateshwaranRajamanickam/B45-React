@@ -4,7 +4,7 @@ import {Button,Input, CardBody,Container, Card, CardSubtitle, CardTitle, InputGr
 export default function Teacherdetail ({details,reset,deletefile, Updatedetail}) {
     return (
         <>
-        <Card  className='teacherdetailcard'
+        {/* <Card  className='teacherdetailcard'
             >
                 <CardBody>
                     <CardTitle tag="h5">
@@ -43,6 +43,7 @@ export default function Teacherdetail ({details,reset,deletefile, Updatedetail})
             <Button color="primary" onClick={()=>reset(0)}>
             Back
           </Button>
+    </> */}
     </>
     )
 

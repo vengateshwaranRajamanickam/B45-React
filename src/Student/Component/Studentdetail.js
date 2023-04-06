@@ -1,7 +1,7 @@
 import React from 'react'
 import {Input,Button, CardBody, Card, CardSubtitle, CardTitle, InputGroup, CardText } from 'reactstrap'
 
-export default function Studentdetail({details,reset,deletefile,Updatedetail}) {
+export default function Studentdetail({details,reset,Updatedetail}) {
    
     return (
         <>
@@ -14,7 +14,7 @@ export default function Studentdetail({details,reset,deletefile,Updatedetail}) {
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                       Registered Name:{details.name}<Button className='Deletefile' color="danger" onClick={()=>deletefile(details.id)}>Delete</Button>
+                       Registered Name:{details.name}
                     </CardSubtitle>
                     <CardText>
                        Studentid:{details.studentid}
@@ -31,8 +31,13 @@ export default function Studentdetail({details,reset,deletefile,Updatedetail}) {
                     <div>Teacher Comment/Feedback:</div>
                     <div >{details.comment}</div>
                     <InputGroup>
-                   <Input>
-                        </Input>
+                   
+                    {/* <Input 
+                         id=""
+                         name="firstname"
+                         placeholder="comment"
+                         type="text" onChange={(e)=>details.comment=e.target.value}>
+                           </Input> */}
                      </InputGroup>
                      </CardBody>
                      <Button color="primary"  onClick={()=>Updatedetail(details)}>Submit Comment</Button>
@@ -46,3 +51,4 @@ export default function Studentdetail({details,reset,deletefile,Updatedetail}) {
     )
 
 }
+//<Button className='Deletefile' color="danger" onClick={()=>deletefile(details.id)}>Delete</Button>
