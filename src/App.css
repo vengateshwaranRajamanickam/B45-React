@@ -61,3 +61,15 @@ justify-content: center;
   background-color:antiquewhite;
   box-shadow: 1px 1px 5px 1px lightslategray;
 }
+.registerteacherpage{
+  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: 2rem 1rem;
+}
+.registerpage{
+  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: 2rem 1rem;
+}
