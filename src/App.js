@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import {Input, Button, Container, InputGroup } from 'reactstrap';
+import {useState} from 'react'
+import ConformTodolist from './ConformTodolist';
 
-function App() {
+export default function App() {
+  const [Todolist,setTodolist]=useState([]);
+  const Getvalue=(e)=>{
+  setTodolist([...Todolist],e.target.value);
+  }
+  console.log(Getvalue)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      <Container>
+        <InputGroup>
+        <Input onClick={Getvalue}/>
+        <Todo
+        <ConformTodolist/>
+        <Button>Add Todolist</Button>
+        </InputGroup>
+      </Container>
+      </>
   );
 }
 
-export default App;
+
