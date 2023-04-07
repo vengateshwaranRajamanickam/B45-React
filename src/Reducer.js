@@ -1,4 +1,4 @@
-import { REMOVE_TODO,ADD_TODO,ADD_TODO_COMPLETED,ADD_TODO_INPROGRESS } from "./Action.type";
+import { REMOVE_TODO,ADD_TODO,ADD_TODO_COMPLETED,ADD_TODO_INPROGRESS } from "./Actiontype";
 const Reducer =(state,action)=>{
     switch(action.type){
         case ADD_TODO:
@@ -9,15 +9,13 @@ const Reducer =(state,action)=>{
               let removeTodo = state.todo.filter(
                 (value) => value.id !== action.payload
               );
-              console.log(obj)
               let tempState = {
                 ...state,
-                
-                todo: removeTodo,inprogress: [...state.inprogress, ...obj]
+              todo: removeTodo,inprogress: [...state.inprogress, ...obj]
               };
               return tempState;
               }
-            case ADD_TODO_COMPLETED:
+            case ADD_TODO_COMPLETED:  
                 let completeobj = state.inprogress.filter(
                   (value) => value.id === action.payload
                 );

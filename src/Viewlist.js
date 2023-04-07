@@ -1,13 +1,13 @@
 import {Alert, Container,Col,Row,Button} from 'reactstrap'
-import { REMOVE_TODO,ADD_TODO_INPROGRESS,ADD_TODO_COMPLETED } from './Action.type';
+import { REMOVE_TODO,ADD_TODO_INPROGRESS,ADD_TODO_COMPLETED } from './Actiontype';
 import { TodoContext } from './Context';
 import { useContext } from 'react';
 export default function List(){
     const { state, dispatch } = useContext(TodoContext);
     return(
-  <Container>
+  <Container className='mt-4'>
     <Row>
-    <Col xs={12} md={4}>
+    <Col  className='mt-2'xs={12} md={4}>
           <h3 className='listtitle'>All Todos</h3>
           {state.todo.map((value) => {
             return (
@@ -33,7 +33,7 @@ export default function List(){
             );
           })}
         </Col>
-        <Col xs={12} md={4}>
+        <Col className='mt-2' xs={12} md={4}>
         <h3 className='listtitle2'>Inprogress Todos</h3>
           {state.inprogress.map((progress) => {
             return (
@@ -59,7 +59,7 @@ export default function List(){
             );
           })}
         </Col>
-        <Col xs={12} md={4}>
+        <Col className='mt-2' xs={12} md={4}>
         <h3 className='listtitle3'>Selected Todos</h3>
           {state.completed.map((value) => {
             return (
