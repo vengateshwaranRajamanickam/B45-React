@@ -1,0 +1,26 @@
+.Listcontainer{
+  margin-top: 2rem;
+}
+.TodoList{
+  margin-top: 2rem;
+}
+.listtitle{
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+.listtitle2{
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color:cornflowerblue;
+}
+.listtitle3{
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color:green;
+}
+.addbutton:hover{
+  box-shadow: 2px 2px 5px 1px lightslategray;
+}

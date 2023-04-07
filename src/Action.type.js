@@ -1,0 +1,4 @@
+export const ADD_TODO = "ADD_TODO";
+export const ADD_TODO_INPROGRESS = "ADD_TODO_INPROGRESS";
+export const ADD_TODO_COMPLETED = "ADD_TODO_COMPLETED";
+export const REMOVE_TODO = "REMOVE_TODO";
