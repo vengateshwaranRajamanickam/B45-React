@@ -13,7 +13,7 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function App() {
   return (
     <div className="App">
-      <Provider>
+      <Provider> 
         <BrowserRouter>
           <Nav />
           <Routes>
@@ -23,7 +23,7 @@ export default function App() {
             <Route path="/registerteacher" element={<Registerteacher />} />
           </Routes>
         </BrowserRouter>
-      </Provider>
+        </Provider>
     </div>
   );
 }

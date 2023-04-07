@@ -2,15 +2,14 @@
   box-sizing: border-box;
   border-radius: 3px;
   width: 40rem;
-  box-shadow: 1px 1px 5px 1px lightslategray;
+  box-shadow: 0px 0px 0px 1px lightslategray;
   margin-top: 2rem;
 }
 .studentdetailcard{
   box-sizing: border-box;
   border-radius: 3px;
   width: 50rem;
-  box-shadow: 1px 1px 5px 1px lightslategray;
-
+  box-shadow: 2px 2px 5px 1px lightslategray;
 }
 .studentpage{
   background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
@@ -28,15 +27,20 @@ justify-content: center;
   box-sizing: border-box;
   border-radius: 3px;
   width: 40rem;
-  box-shadow: 1px 1px 5px 1px lightslategray;
+  box-shadow: 0px 0px 0px 1px lightslategray;
   margin-top: 2rem;
+}
+.teachercard:hover{
+  box-shadow: 2px 2px 5px 1px lightslategray;
 }
 .teacherdetailcard{
   box-sizing: border-box;
   border-radius: 3px;
   width: 50rem;
-  box-shadow: 1px 1px 5px 1px lightslategray;
-
+  box-shadow: 2px 2px 5px 1px lightslategray;
+}
+.studentcard:hover{
+  box-shadow: 2px 2px 5px 1px lightslategray;
 }
 .Showdetails{
   float: right;

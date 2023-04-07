@@ -18,7 +18,7 @@ export default function Studentcard({ data, add }) {
           border: "none"
         }}
       >
-        <CardBody onClick={() => add(data.id)}>
+        <CardBody onClick={() =>add(data.id)}>
           <CardTitle tag="h5">
             Rank:{data.rank}
             <Button className="Showdetails" color="info">

@@ -50,6 +50,21 @@ export default function TeacherRegister() {
               ></Input>
             </Col>
           </FormGroup>
+          <FormGroup row>
+            <Label for="exampleText" sm={2}>
+              Teacher department
+            </Label>
+            <Col sm={10}>
+              <Input
+                id="teacherdid"
+                name="teacherid"
+                placeholder="Teacherid"
+                type="number"
+                onChange={context.handleChange}
+                //value={user.phonenumber}
+              ></Input>
+            </Col>
+          </FormGroup>
           <FormGroup>
             <Col sm={10}>
               <Button color="info" onClick={context.TeacherCreatedetail}>
