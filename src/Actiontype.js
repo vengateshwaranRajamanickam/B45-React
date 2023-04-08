@@ -1,0 +1,7 @@
+export const ADDITION="ADDITION"
+export const SUBRACTION="SUBRACTION"
+export const DIVISION="DIVISION"
+export const MULTIPLICATION="MULTIPLICATION"
+export const DISPLAY="DISPLAY"
+export const INPUTNUMBER="INPUTNUMBER"
+export const CLEAR="CLEAR"

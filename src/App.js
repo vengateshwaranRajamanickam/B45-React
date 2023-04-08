@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { useReducer } from 'react';
+import Reducer from './Reducer';
+import { Calc } from './Context';
+import Displaycalc from './Displaycalc'
 
 function App() {
+  let initialvalue = {prevdata:"", nextdata:[]};
+  const [state, dispatch] = useReducer(Reducer, initialvalue)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Calc.Provider value={{state, dispatch}}>
+      <Displaycalc />
+      <p>jlsfdfoisfu</p>
+    </Calc.Provider>
+
   );
 }
 
