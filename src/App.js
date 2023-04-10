@@ -13,11 +13,11 @@ export default function App() {
     document.body.style.background=" cornflowerblue";
    });
 useEffect(()=>{
-if(winner){
-  toast.success(`player ${winner} is win`)
+if(winner==="Draw"){
+ toast.info(`Match Draw`);
 }
-else if(winner==="Draw"){
-  toast.error(`Match Draw`);
+else if(winner){
+  toast.success(`player ${winner} is win`)
 }
 },[winner])
 
@@ -114,9 +114,9 @@ else if(winner==="Draw"){
           </div>
         </Col>
         <Col xs={{ offset: 1, size: 3 }} >
-        {winner ? <div><h3>winner:{winner}</h3>
-        <Button color="info" onClick={Reset}>Reset</Button></div> : winner==="Draw"?  <div><h3>Match:"Draw"</h3>
-        <Button color="info" onClick={Reset}>Reset</Button></div>:""}
+        { winner==="Draw"?  <div><h3>Match:"Draw"</h3>
+        <Button color="info" onClick={Reset}>Reset</Button></div> : winner? <div><h3>winner:{winner}</h3>
+        <Button color="info" onClick={Reset}>Reset</Button></div> :""}
       </Col>
         <ToastContainer/>   
       </Row>
