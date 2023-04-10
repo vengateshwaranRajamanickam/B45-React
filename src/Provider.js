@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Context from "./Context";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from 'axios'
 let initialValue = {
   name: "",
   rank: 0,
@@ -11,29 +12,21 @@ let initialValue = {
   teacherid:0
 };
 export default function Provider(props) {
-  const [UserData, setUserData] = useState([]);
   const [inputarray, setinputarray] = useState([]);
   const [UserStudent, setUserStudent] = useState([]);
   const [UserTeacher, setUserTeacher] = useState([]);
-  const [formData, setFormData] = useState(initialValue);
+ const [formData, setFormData] = useState(initialValue);
   useEffect(() => {
-    fetch("https://640f08d74ed25579dc43acce.mockapi.io/amazon")
-      .then((res) => res.json())
+    axios("https://640f08d74ed25579dc43acce.mockapi.io/amazon")
       .then((data) => {
-        setUserData(data);
-        let tempstudent=data.map(person => ({studentid: person.studentid, name: person.name,rank:person.rank }))
-        let tempteacher=data.map(person => ({teacherid:person.teacherid,teachername: person.teachername, teacherdepartment: person.teacherdepartment}))
+        let tempstudent=data.data.map(person => ({studentid: person.studentid, name: person.name,rank:person.rank }))
+        let tempteacher=data.data.map(person => ({teacherid:person.teacherid,teachername: person.teachername, teacherdepartment: person.teacherdepartment}))
         tempstudent=tempstudent.map(val=>val=({...val,id:uuidv4()}))
         tempteacher= tempteacher.map(val=>val=({...val,id:uuidv4()}))
         setUserStudent(tempstudent);
         setUserTeacher(tempteacher);
       });
   }, []);
-useEffect(()=>{
-
-},[]
-)
-
   function StudentDeletedetail(id) {
     let index = UserStudent.findIndex((value) => value.id === id);
     let temp = UserStudent.splice(index, 1);
@@ -45,9 +38,7 @@ useEffect(()=>{
     setinputarray([]);
   }
   function StudentCreatedetail() {
-    console.log(formData )
     setUserStudent([...UserStudent, { ...formData }]);
-    console.log(UserStudent)
   }
   function TeacherCreatedetail() {
     setUserTeacher([...UserTeacher, { ...formData }]);
