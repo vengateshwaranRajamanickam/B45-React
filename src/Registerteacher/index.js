@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useRef,useEffect} from "react";
 import {
   Row,
   Col,
@@ -15,6 +15,10 @@ import { useNavigate } from "react-router-dom";
 export default function TeacherRegister() {
   const context = useContext(Context);
   const nav = useNavigate();
+  const inputref=useRef();
+  useEffect(()=>{
+    inputref.current.focus()
+  },[])
   return (
     <div className="registerteacherpage">
       <Container>
@@ -30,7 +34,8 @@ export default function TeacherRegister() {
                 placeholder="Teachername"
                 type="text"
                 onChange={context.handleChange}
-                // value={}
+                innerRef={inputref}
+                required
               ></Input>
             </Col>
           </FormGroup>
@@ -46,7 +51,7 @@ export default function TeacherRegister() {
                 placeholder="Teacherdepartment"
                 type="text"
                 onChange={context.handleChange}
-                //value={user.phonenumber}
+                required
               ></Input>
             </Col>
           </FormGroup>
@@ -61,7 +66,7 @@ export default function TeacherRegister() {
                 placeholder="Teacherid"
                 type="number"
                 onChange={context.handleChange}
-                //value={user.phonenumber}
+                required
               ></Input>
             </Col>
           </FormGroup>

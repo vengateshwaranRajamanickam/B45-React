@@ -15,7 +15,7 @@ export default function Provider(props) {
   const [inputarray, setinputarray] = useState([]);
   const [UserStudent, setUserStudent] = useState([]);
   const [UserTeacher, setUserTeacher] = useState([]);
- const [formData, setFormData] = useState(initialValue);
+  const [formData, setFormData] = useState(initialValue);
   useEffect(() => {
     axios("https://640f08d74ed25579dc43acce.mockapi.io/amazon")
       .then((data) => {
@@ -38,10 +38,10 @@ export default function Provider(props) {
     setinputarray([]);
   }
   function StudentCreatedetail() {
-    setUserStudent([...UserStudent, { ...formData }]);
+    setUserStudent([...UserStudent, formData]);
   }
   function TeacherCreatedetail() {
-    setUserTeacher([...UserTeacher, { ...formData }]);
+    setUserTeacher([...UserTeacher, formData]);
   }
 
   function handleChange(e) {

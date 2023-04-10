@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect,useRef } from "react";
 import {
   Row,
   Col,
@@ -15,6 +15,10 @@ import { useNavigate } from "react-router-dom";
 export default function Register() {
   const context = useContext(Context);
   const nav = useNavigate();
+  const inputref=useRef();
+  useEffect(()=>{
+    inputref.current.focus()
+  },[])
   return (
     <div className="registerpage">
       <Container>
@@ -28,11 +32,12 @@ export default function Register() {
                 id="name"
                 name="name"
                 placeholder="Name"
-                type="text"
+                type="text" autofocus
                 onChange={context.handleChange}
-                //value=""
-              />
-              {}
+                required
+               innerRef={inputref}
+              >
+              </Input>
             </Col>
           </FormGroup>
           <FormGroup row>
@@ -44,9 +49,9 @@ export default function Register() {
                 id="student id"
                 name="studentid"
                 placeholder="Student id"
-                type="number"
+                type="numberic"
                 onChange={context.handleChange}
-                //value=""
+                required
               ></Input>
             </Col>
           </FormGroup>
@@ -60,9 +65,9 @@ export default function Register() {
                 id="rank"
                 name="rank"
                 placeholder="Rank"
-                type="number"
+                type="numberic"
                 onChange={context.handleChange}
-                //value=""
+                required
               ></Input>
             </Col>
           </FormGroup>
