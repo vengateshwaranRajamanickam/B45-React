@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Container, Row, Col, Card, CardBody, CardImg, Button } from 'reactstrap'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useLayoutEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 let array = [
   { isVisbile: false, value: "https://static.javatpoint.com/images/javascript/javascript_logo.png" },
@@ -17,16 +17,15 @@ let array = [
 
 ];
 let gameimage = "https://img.freepik.com/free-vector/joystick-game-sport-technology_138676-2045.jpg?w=826&t=st=1681219938~exp=1681220538~hmac=1410e02bae3ae30e2824664d91adad6e8aabc929233f1eecab4835f4738ed906";
-let attemptdisplay;
+
 export default function App() {
-  const [inputarray, setinputarray] = useState(array);
-  const [shuffle, setshuffle] = useState([]);
+  const [shuffle, setshuffle] = useState(array);
   const [winner, setwinner] = useState(false);
-  const [attempt, setattempt] = useState(1);
+  let [attempt, setattempt] = useState(0);
   const [count, setcount] = useState(0);
   let [previndex, setprevindex] = useState(1000);
-
-  function shufflearray(arr) {
+  let [attemptdisplay,setattemptdisplay]=useState(0);
+  function shufflefn(arr) {
 
     for (let i = 0; i < arr.length; i++) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -34,9 +33,11 @@ export default function App() {
     }
     setshuffle([...arr])
   }
-
+  // useLayoutEffect(() => {
+  //   document.body.style.background="aqua";
+  //  });
   useEffect(() => {
-    shufflearray(array)
+    shufflefn(array)
   }, [])
 
   function display(index) {
@@ -52,7 +53,7 @@ export default function App() {
 
       }
       else {
-        setattempt(attempt + 1);
+        setattempt(attempt+1);
         checkwinnerfn(index)
       }
     }
@@ -62,37 +63,38 @@ export default function App() {
       setwinner(true)
       setcount(0);
       setprevindex(1000);
-      attemptdisplay = attempt;
+      setattemptdisplay(attempt);
       setattempt(1);
+      toast.success("Match")
     }
     else {
       setTimeout(() => {
         setcount(0);
         setprevindex(1000);
-        let temp = shuffle.map((value, index) => { return { ...value, isVisbile: false } });
+        let temp = shuffle.map((value,index) =>{return { ...value, isVisbile: false } });
         setshuffle(temp)
-      }, 2000);
+      }, 1000);
     }
   }
 
   function Reset() {
-    let temp = inputarray.map((value, index) => { return { ...value, isVisbile: false } });
+    let temp = shuffle.map((value, index) => { return { ...value, isVisbile: false } });
     setshuffle(temp);
     setattempt(0);
     setwinner(false);
     setprevindex(1000);
+    toast.info("Game Reseted")
   }
   return (
-    <Container>
+    <Container >
       <Row>
-        <h3>Tile Match</h3>
-        <Col md={{ offset: 2, size: 4 }}>
+        <h3 style={{textAlign:"center",margin:20}}>Tile Match</h3>
+        <Col md={{ offset: 4, size: 4 }}>
           <div className='grid'>
             {
               shuffle.map((value, index) => {
                 return (
-
-                  <Card className="box" onClick={() => display(index)}>
+                  <Card  onClick={() => display(index)}>
                     <CardBody >{value.isVisbile ? <CardImg src={value.value} alt="" />
                       : <CardImg src={gameimage} alt="" />}
                     </CardBody>
@@ -104,11 +106,24 @@ export default function App() {
           </div>
         </Col>
         <Col md={{ offset: 1, size: 3 }}>
+          <Button color="info" onClick={Reset}>Reset</Button>
           {
-            winner === true ? <div><h4>winner: on {attemptdisplay} attempt</h4><Button color="info" onClick={Reset}>Reset</Button></div> : ""
+            winner === true ?<h4>winner: on {attemptdisplay} attempt</h4>: ""
           }
+          
         </Col>
-        <ToastContainer />
+        <ToastContainer
+          position="top-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </Row>
     </Container>
 

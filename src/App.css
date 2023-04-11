@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
- 
+  margin-top: 20px;
 }
-.box{
-  height: 100px;
+
+body{
+  background-color: rgb(39, 24, 78);
 }
