@@ -121,7 +121,6 @@ else if(winner){
         <ToastContainer/>   
       </Row>
     </Container>
-//style={{ display: 'inline', margin: "4vw" }}
   )
 }
 
