@@ -1,34 +1,45 @@
 
 import { Formik } from "formik";
-import { useNavigate} from 'react-router-dom'
+import { useNavigate,useParams} from 'react-router-dom'
 import { Button,Container,Form,FormGroup,Label,Col,Input} from "reactstrap";
-import {useEffect} from 'react'
-import { useRef } from "react";
+import {useEffect,useContext,useRef} from 'react'
+import {LibraryContext} from "../Context"
+//import axios from 'axios'
 export default function AddBook() {
+  //const {id}=useParams();
+  const {CreateBook}=useContext(LibraryContext);
   const nav=useNavigate();
   const inputref=useRef(); 
-  //  useEffect(()=>{
+  //const [TempBookarray,setTempBookarray]=useContext([]);
+   useEffect(()=>{
+    inputref.current.focus()
+  },[])
+  // useEffect(()=>{
+  //   if(id){
+  //     axios("https://63f4cd7a2213ed989c4ae285.mockapi.io/ap/v1/Library/"+id)
+  //     .then(data => {let temp=data;
+  //       setTempBookarray(temp.data)
+  //     console.log(TempBookarray)})
+  //   }
   //   inputref.current.focus()
-  // },[])
+  // },[id])
   const validate = (values) => {
     const errors = {};
     if (!values.BookName) {
       errors.BookName = "Book Name is Required";
-    } else if (values.BookName.length < 3) {
+    } else if (values.BookName.length <3) {
       errors.BookName = "Book Name should have min length 3";
-    }
-    if (!values.Bookyear) {
-      errors.Bookyear = "Bookyear is required";
-    } else if (0<values.Bookyear.length < 4) {
-      errors.Bookyear = "Bookyear should have length of 4";
-    } else if (!values.Bookyear.match("^[6-9][0-9]{9}$")) {
-      errors.Bookyear = "Mobile number is not valid";
     }
     if (!values.Author) {
       errors.Author = "Author Name is Required";
-    } else if (values.Author.length < 5) {
+    } else if (values.Author.length <5) {
       errors.Author = "Author Name should have min length 5";
     }
+    if (!values.Bookyear) {
+      errors.Bookyear = "Bookyear is required";
+    } else if (0<values.Bookyear.length&&values.Bookyear.length <4) {
+      errors.Bookyear = "Bookyear should have length of 4";
+    } 
     if (!values.Bookdescription) {
       errors.Bookdescription = "Bookdescription is Required";
     } 
@@ -45,12 +56,11 @@ export default function AddBook() {
         Author: "",
         id: 0
       }}
-      onSubmit={(values) => {
-        console.log(values);
-      }}
+      onSubmit={(value)=>CreateBook(value)}
       validate={validate}
     >
       {({ handleSubmit, handleChange, touched, errors }) => {
+        return(
         <div className="registerpage mt-5">
           <Container>
             <Form>
@@ -65,9 +75,14 @@ export default function AddBook() {
                     placeholder="Book Name"
                     type="text"
                     onChange={handleChange}
-                    //innerRef={inputref}
+                    innerRef={inputref}
                   >
                   </Input>
+                  {touched.BookName && errors.BookName ? (
+            <div>{errors.BookName}</div>
+          ) : (
+            ""
+          )}
                 </Col>
               </FormGroup>
               <FormGroup row>
@@ -82,9 +97,14 @@ export default function AddBook() {
                     type="text"
                     onChange={handleChange}
                   ></Input>
+                   {touched.Author && errors.Author ? (
+            <div>{errors.Author}</div>
+          ) : (
+            ""
+          )}
                 </Col>
               </FormGroup>
-              <FormGroup row>
+              {/* <FormGroup row>
                 <Label for="Book ID" sm={2}>
                   Book id
                 </Label>
@@ -95,9 +115,13 @@ export default function AddBook() {
                     placeholder="Book id"
                     type="numberic"
                     onChange={handleChange}
-                  ></Input>
+                  ></Input>{touched.id && errors.id? (
+            <div>{errors.id}</div>
+          ) : (
+            ""
+          )}
                 </Col>
-              </FormGroup>
+              </FormGroup> */}
               <FormGroup row>
                 <Label for="Bookyear" sm={2}>
                 Bookyear
@@ -106,10 +130,15 @@ export default function AddBook() {
                   <Input
                     id="Bookyear"
                     name="Bookyear"
-                    placeholder="Rank"
+                    placeholder="Book Year"
                     type="numberic"
                     onChange={handleChange}
                   ></Input>
+                   {touched.Bookyear && errors.Bookyear? (
+            <div>{errors.Bookyear}</div>
+          ) : (
+            ""
+          )}
                 </Col>
               </FormGroup>
               <FormGroup row>
@@ -124,6 +153,11 @@ export default function AddBook() {
                     type="numberic"
                     onChange={handleChange}
                   ></Input>
+                   {touched.Bookdescription && errors.Bookdescription? (
+            <div>{errors.Bookdescription}</div>
+          ) : (
+            ""
+          )}
                 </Col>
               </FormGroup>
               <FormGroup>
@@ -139,6 +173,7 @@ export default function AddBook() {
             </Button>
           </Container>
         </div>
+        )
       }}
       </Formik>
       )

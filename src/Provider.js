@@ -27,11 +27,14 @@ export default function Provider(props) {
        setShowdetail([tempProd]);
     }
   }
+  function CreateBook(value){
+    setBookarray([...Bookarray,value])
+  }
   return (
     <LibraryContext.Provider
       value={{
        DeleteBook,BookShow,
-        Bookarray,Showdetail}}>
+        Bookarray,Showdetail,CreateBook}}>
       {props.children}
     </LibraryContext.Provider>
   );

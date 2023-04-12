@@ -8,12 +8,13 @@ import {
   CardText,
   Container
 } from "reactstrap";
-
+import { useNavigate } from "react-router-dom";
 export default function Bookdetail({
   details,
   reset,
   deletefile
 }) {
+  const nav=useNavigate();
   return (
     <>
       <Card className="Bookdetailcard">
@@ -38,12 +39,11 @@ export default function Bookdetail({
           </Container>
           <br />
         </CardBody>
-        <Button color="warning" >
-          Submit Comment
+        <Button color="warning" onClick={() =>nav("./addbook/"+1)}>
+          Update Book Details
         </Button>
       </Card>
-
-      <Button color="info" onClick={() => reset(0)}>
+      <Button className="mt-4" color="info" onClick={() => reset(0)}>
         Back
       </Button>
     </>
