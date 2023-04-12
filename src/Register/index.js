@@ -1,21 +1,19 @@
 import React, { useContext,useEffect,useRef } from "react";
 import {
-  Row,
   Col,
   Container,
   Label,
   Form,
   FormGroup,
   Input,
-  FormText,
   Button
 } from "reactstrap";
 import Context from "../Context";
 import { useNavigate } from "react-router-dom";
 export default function Register() {
-  const context = useContext(Context);
+const context = useContext(Context);
   const nav = useNavigate();
-  const inputref=useRef();
+   const inputref=useRef();
   useEffect(()=>{
     inputref.current.focus()
   },[])
