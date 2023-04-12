@@ -20,7 +20,7 @@ export default function TeacherRegister() {
     inputref.current.focus()
   },[])
   return (
-    <div className="registerteacherpage">
+    <div className="registerteacherpage mt-5">
       <Container>
         <Form>
           <FormGroup row>

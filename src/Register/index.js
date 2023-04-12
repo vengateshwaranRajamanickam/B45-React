@@ -20,7 +20,7 @@ export default function Register() {
     inputref.current.focus()
   },[])
   return (
-    <div className="registerpage">
+    <div className="registerpage mt-5">
       <Container>
         <Form>
           <FormGroup row>
