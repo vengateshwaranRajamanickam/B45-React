@@ -1,0 +1,43 @@
+import React, { useContext } from "react";
+import Card from "./Component/Card";
+import Carddetail from "./Component/Carddetails";
+import { Row, Col } from "reactstrap";
+import {LibraryContext} from "../Context";
+
+export default function Student() {
+  const {Bookarray, DeleteBook,BookShow,Showdetail}= useContext(LibraryContext);
+  return (
+    <Row className="Librarypage">
+      <Col
+        xs={12}
+        sm={Showdetail.length === 0 ? 12 : 8}
+        md={Showdetail.length === 0 ? 12 : 6}
+      >
+        {Bookarray.map((value, index) => (
+          <>
+            <Card
+              key={index}
+              data={value}
+              add={BookShow}
+            />
+            <br />
+          </>
+        ))}
+      </Col>
+      <Col
+        xs={12}
+        sm={Showdetail.length === 0 ? 0: 8}
+        md={Showdetail.length === 0 ? 0 : 6}
+      >
+        {Showdetail.map((value, index) => (
+          <Carddetail
+            key={index}
+            details={value}
+            reset={BookShow}
+            deletefile={DeleteBook}
+          />
+        ))}
+      </Col>
+    </Row>
+  );
+}
