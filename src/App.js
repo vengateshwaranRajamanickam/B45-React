@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Container, Row, Col, Card, CardBody, CardImg, Button } from 'reactstrap'
 import { useState, useEffect,useLayoutEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 let array = [
   { isVisbile: false, value: "https://static.javatpoint.com/images/javascript/javascript_logo.png" },
@@ -17,7 +18,7 @@ let array = [
 
 ];
 let gameimage = "https://img.freepik.com/free-vector/joystick-game-sport-technology_138676-2045.jpg?w=826&t=st=1681219938~exp=1681220538~hmac=1410e02bae3ae30e2824664d91adad6e8aabc929233f1eecab4835f4738ed906";
-
+let solved=0;
 export default function App() {
   const [shuffle, setshuffle] = useState(array);
   const [winner, setwinner] = useState(false);
@@ -27,20 +28,18 @@ export default function App() {
   let [attemptdisplay,setattemptdisplay]=useState(0);
   function shufflefn(arr) {
 
-    for (let i = 0; i < arr.length; i++) {
-      let j = Math.floor(Math.random() * (i + 1));
+    for (let i = 0; i < arr.length-1; i++) {
+      let j = Math.floor(Math.random() *10);
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    setshuffle([...arr])
+    let temp=arr.map((value,index)=>{return{...value,id:uuidv4()}})
+    setshuffle([...temp])
   }
-  // useLayoutEffect(() => {
-  //   document.body.style.background="aqua";
-  //  });
   useEffect(() => {
     shufflefn(array)
   }, [])
 
-  function display(index) {
+  function display(index,id) {
     if (count < 2 && previndex !== index) {
       let temp = shuffle;
       temp[index].isVisbile = true;
@@ -54,18 +53,22 @@ export default function App() {
       }
       else {
         setattempt(attempt+1);
-        checkwinnerfn(index)
+        checkwinnerfn(index,id)
       }
     }
   }
-  function checkwinnerfn(index) {
+  function checkwinnerfn(index,id) {
     if (winner === shuffle[index].value) {
+      let remove=shuffle.splice(previndex,1)
+      let newarray=shuffle.filter((value)=>value.id!==id)
+      setshuffle(newarray)
       setwinner(true)
       setcount(0);
       setprevindex(1000);
       setattemptdisplay(attempt);
       setattempt(1);
       toast.success("Match")
+     
     }
     else {
       setTimeout(() => {
@@ -78,12 +81,13 @@ export default function App() {
   }
 
   function Reset() {
-    let temp = shuffle.map((value, index) => { return { ...value, isVisbile: false } });
+    let temp = array.map((value, index) => { return { ...value, isVisbile: false } });
     setshuffle(temp);
     setattempt(0);
     setwinner(false);
     setprevindex(1000);
     toast.info("Game Reseted")
+    solved=0;
   }
   return (
     <Container >
@@ -94,9 +98,9 @@ export default function App() {
             {
               shuffle.map((value, index) => {
                 return (
-                  <Card  onClick={() => display(index)}>
-                    <CardBody >{value.isVisbile ? <CardImg src={value.value} alt="" />
-                      : <CardImg src={gameimage} alt="" />}
+                  <Card  onClick={() => display(index,value.id)}>
+                    <CardBody >{value.isVisbile ? <CardImg className='image'  src={value.value} alt="" />
+                      : <CardImg className='image' src={gameimage} alt="" />}
                     </CardBody>
                   </Card>
 
@@ -108,13 +112,13 @@ export default function App() {
         <Col md={{ offset: 1, size: 3 }}>
           <Button color="info" onClick={Reset}>Reset</Button>
           {
-            winner === true ?<h4>winner: on {attemptdisplay} attempt</h4>: ""
+            winner === true ?<><h4>Match: on {attemptdisplay} attempt </h4><h4>Tile match:{solved+=1}</h4></>: ""
           }
           
         </Col>
         <ToastContainer
           position="top-right"
-          autoClose={1000}
+          autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
