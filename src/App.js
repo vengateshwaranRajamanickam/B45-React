@@ -15,7 +15,7 @@ import Logoutmodel from './Logoutmodel';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashtopbar from './Dashtopbar';
-
+import {Row,Col} from 'reactstrap'
 function HomePage() {
   return (
     <div id="wrapper">
@@ -26,19 +26,19 @@ function HomePage() {
           <Dashtopbar/>
           <Earningmonthly/>
             
-          <div class="row">
+          <Row>
             <Areachart />
             <Piechart />
-          </div>
-          <div class="row">
-          <div class="col-lg-6 mb-4">
+            </Row>
+          <Row>
+            <Col xs={12} sm={8} md={6} lg={6}>
               <ProjecExample/><Colorsystem />
-            </div>
-            <div class="col-lg-6 mb-4">
+           </Col>
+              <Col xs={12} sm={8} md={6} lg={6}>
               <Illustration></Illustration>
               <Approach />
-           </div>
-          </div>
+         </Col>
+           </Row>
 
         </div>
         <Footer/>
