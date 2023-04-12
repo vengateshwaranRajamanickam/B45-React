@@ -57,7 +57,7 @@ export default function TeacherRegister() {
           </FormGroup>
           <FormGroup row>
             <Label for="exampleText" sm={2}>
-              Teacher department
+              Teacher id
             </Label>
             <Col sm={10}>
               <Input

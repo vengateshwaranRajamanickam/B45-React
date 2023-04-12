@@ -10,7 +10,7 @@ export default function Student() {
     <Row className="teacherpage">
       <Col
         xs={12}
-        sm={context.inputarray.length === 0 ? 12 : 8}
+        sm={context.inputarray.length === 0 ? 12 :12 }
         md={context.inputarray.length === 0 ? 12 : 6}
       >
         {context.UserTeacher.map((value, index) => (
@@ -26,7 +26,7 @@ export default function Student() {
       </Col>
       <Col
         xs={12}
-        sm={context.inputarray.length === 0 ? 12 : 8}
+        sm={context.inputarray.length === 0 ? 0 : 12}
         md={context.inputarray.length === 0 ? 0 : 6}
       >
         {context.inputarray.map((value, index) => (
@@ -39,6 +39,7 @@ export default function Student() {
           />
         ))}
       </Col>
+
     </Row>
   );
 }

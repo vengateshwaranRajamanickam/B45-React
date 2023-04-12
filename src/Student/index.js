@@ -26,7 +26,7 @@ export default function Student() {
       </Col>
       <Col
         xs={12}
-        sm={context.inputarray.length === 0 ? 12 : 8}
+        sm={context.inputarray.length === 0 ? 0: 8}
         md={context.inputarray.length === 0 ? 0 : 6}
       >
         {context.inputarray.map((value, index) => (
