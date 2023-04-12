@@ -5,7 +5,7 @@ import Viewlist from './Viewlist'
 import { useReducer } from 'react';
 import { TodoContext } from './Context';
 import reducer  from './Reducer'
-export default function App({input}){
+export default function App(){
   let initialvalue={
     todo:[],
     inprogress:[],

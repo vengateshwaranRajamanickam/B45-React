@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { TodoContext } from "./Context";
 import { Input, Button, Container, InputGroup } from 'reactstrap';
 import { ADD_TODO } from "./Actiontype";
-export default function App() {
+export default function List() {
   const { dispatch } = useContext(TodoContext)
   const inputref = useRef();
   function Getvalue(e) {
