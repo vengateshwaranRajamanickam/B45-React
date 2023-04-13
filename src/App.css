@@ -6,12 +6,13 @@
   box-shadow: 2px 2px 5px 1px lightslategray;
 }
 .Librarypage{
-  background-image:url(https://png.pngtree.com/png-clipart/20190603/original/pngtree-creative-combination-of-library-books-logo-vector-material-png-image_126323.jpg);
+  /* background-image:url(https://png.pngtree.com/png-clipart/20190603/original/pngtree-creative-combination-of-library-books-logo-vector-material-png-image_126323.jpg); */
+  background-image:url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size:contain;
   background-position: center;
   background-repeat:round;
   min-height: 100vh;
-  min-width: 100%;
+  min-width: 100vw;
 }
 .Bookcard{
   box-sizing: border-box;
@@ -52,10 +53,15 @@ justify-content: center;
   box-shadow: 1px 1px 5px 1px lightslategray;
 }
 .registerpage{
-  background-image:url(https://png.pngtree.com/png-clipart/20190603/original/pngtree-creative-combination-of-library-books-logo-vector-material-png-image_126323.jpg);
+  background-image:url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size:cover;
   background-position: center;
-  height: 100vh;
+  background-repeat:round;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  justify-content: center;
+
 }
 .Authorcard{
   display: inline;
@@ -68,4 +74,30 @@ justify-content: center;
 }
 .error{
   color:red;
+}
+.Navbar{
+  background-color:cornsilk;
+}
+.Title{
+  display: flex;
+ margin-left: 600px;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ font-size:xx-large;
+}
+.BookListtitle{
+  display: flex;
+  justify-content: center;
+ text-align: center;
+}
+.registerpageform{
+display:block;
+justify-content: center;
+align-items: center;
+margin:0px 300px 20px 300px;
+}
+.Back{
+  margin-left: 300px;
+  
 }

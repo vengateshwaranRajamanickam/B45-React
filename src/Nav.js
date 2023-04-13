@@ -9,13 +9,16 @@ import {
 
 export default function NavTopbar() {
   return (
-    <Nav tabs>
+    <Nav tabs className='Navbar'>
       <NavItem>
-      <NavLink><Link  to="/">Library</Link>
+      <NavLink><Link  to="/">Home</Link>
       </NavLink>
       </NavItem>
       <NavItem>
       <NavLink ><Link  to="/addbook">Add Book</Link></NavLink>
+      </NavItem>
+      <NavItem className='Title'>
+      National Library
       </NavItem>
     </Nav>
   );

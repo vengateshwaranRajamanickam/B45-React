@@ -58,14 +58,16 @@ export default function AddBook() {
     >
       {({ handleSubmit, handleChange, touched, errors }) => {
         return(
-        <div className="registerpage mt-5">
-          <Container>
-            <Form>
-              <FormGroup row>
+       
+          <Container  className="registerpage">
+            <Form  className="registerpageform">
+            <FormGroup row>
+              <h3 className="BookListtitle mt-3">Library Book Management</h3>
                 <Label for="Book Name"tag="h4" sm={2}>
                   Book Name
                 </Label>
                 <Col sm={10}>
+                  
                   <Input
                     id="bookname"
                     name="BookName"
@@ -166,6 +168,7 @@ export default function AddBook() {
                   <Button color="info" onClick={handleSubmit}>
                     Submit
                   </Button>
+                  
                 </Col>
               </FormGroup>
             </Form>
@@ -173,7 +176,7 @@ export default function AddBook() {
               Back
             </Button>
           </Container>
-        </div>
+       
         )
       }}
       </Formik>

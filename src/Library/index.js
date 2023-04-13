@@ -8,6 +8,7 @@ export default function Student() {
   const {Bookarray, DeleteBook,BookShow,Showdetail}= useContext(LibraryContext);
   return (
     <Row className="Librarypage">
+      <h3 className="BookListtitle mt-3">Library Book Management</h3>
       <Search/>
       <Col
         xs={12}
