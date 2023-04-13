@@ -2,27 +2,24 @@
 import { Formik } from "formik";
 import { useNavigate,useParams} from 'react-router-dom'
 import { Button,Container,Form,FormGroup,Label,Col,Input} from "reactstrap";
-import {useEffect,useContext,useRef} from 'react'
+import {useEffect,useContext,useRef, useState} from 'react'
 import {LibraryContext} from "../Context"
-//import axios from 'axios'
+import axios from 'axios'
 export default function AddBook() {
-  //const {id}=useParams();
+  const {id}=useParams();
   const {CreateBook}=useContext(LibraryContext);
   const nav=useNavigate();
   const inputref=useRef(); 
-  //const [TempBookarray,setTempBookarray]=useContext([]);
+  const [TempBook,setTempBook]=useState([]);
    useEffect(()=>{
     inputref.current.focus()
   },[])
-  // useEffect(()=>{
-  //   if(id){
-  //     axios("https://63f4cd7a2213ed989c4ae285.mockapi.io/ap/v1/Library/"+id)
-  //     .then(data => {let temp=data;
-  //       setTempBookarray(temp.data)
-  //     console.log(TempBookarray)})
-  //   }
-  //   inputref.current.focus()
-  // },[id])
+  useEffect(()=>{
+    if(id){
+      axios("https://63f4cd7a2213ed989c4ae285.mockapi.io/ap/v1/Library/"+id)
+      .then(data =>setTempBook(data.data))
+    }
+  },[id])
   const validate = (values) => {
     const errors = {};
     if (!values.BookName) {
@@ -56,7 +53,7 @@ export default function AddBook() {
         Author: "",
         id: 0
       }}
-      onSubmit={(value)=>CreateBook(value)}
+      onSubmit={(value)=>CreateBook(value,id)}
       validate={validate}
     >
       {({ handleSubmit, handleChange, touched, errors }) => {
@@ -65,40 +62,42 @@ export default function AddBook() {
           <Container>
             <Form>
               <FormGroup row>
-                <Label for="Book Name" sm={2}>
+                <Label for="Book Name"tag="h4" sm={2}>
                   Book Name
                 </Label>
                 <Col sm={10}>
                   <Input
                     id="bookname"
                     name="BookName"
-                    placeholder="Book Name"
+                    placeholder={TempBook.BookName}
                     type="text"
                     onChange={handleChange}
                     innerRef={inputref}
+                    //value={TempBook.BookName}
                   >
                   </Input>
                   {touched.BookName && errors.BookName ? (
-            <div>{errors.BookName}</div>
+            <div className="error">{errors.BookName}</div>
           ) : (
             ""
           )}
                 </Col>
               </FormGroup>
               <FormGroup row>
-                <Label for="Author" sm={2}>
+                <Label for="Author" tag="h4"sm={2}>
                 Author
                 </Label>
                 <Col sm={10}>
                   <Input
                     id="Author"
                     name="Author"
-                    placeholder="Author"
+                    placeholder={TempBook.Author}
                     type="text"
                     onChange={handleChange}
+                    //value={TempBook.Author}
                   ></Input>
                    {touched.Author && errors.Author ? (
-            <div>{errors.Author}</div>
+            <div className="error">{errors.Author}</div>
           ) : (
             ""
           )}
@@ -112,49 +111,51 @@ export default function AddBook() {
                   <Input
                     id="book id"
                     name="id"
-                    placeholder="Book id"
+                    placeholder={TempBook.Bookid}
                     type="numberic"
                     onChange={handleChange}
                   ></Input>{touched.id && errors.id? (
-            <div>{errors.id}</div>
+            <div className="error">{errors.id}</div>
           ) : (
             ""
           )}
                 </Col>
               </FormGroup> */}
               <FormGroup row>
-                <Label for="Bookyear" sm={2}>
+                <Label for="Bookyear" tag="h4"sm={2}>
                 Bookyear
                 </Label>
                 <Col sm={10}>
                   <Input
                     id="Bookyear"
                     name="Bookyear"
-                    placeholder="Book Year"
+                    placeholder={TempBook.Bookyear}
                     type="numberic"
                     onChange={handleChange}
+                    //value={TempBook.Bookyear}
                   ></Input>
                    {touched.Bookyear && errors.Bookyear? (
-            <div>{errors.Bookyear}</div>
+            <div className="error">{errors.Bookyear}</div>
           ) : (
             ""
           )}
                 </Col>
               </FormGroup>
               <FormGroup row>
-                <Label for="Bookdescription" sm={2}>
+                <Label for="Bookdescription"tag="h4" sm={2}>
                 Bookdescription
                 </Label>
                 <Col sm={10}>
                   <Input
                     id="Bookdescription"
                     name="Bookdescription"
-                    placeholder="Bookdescription"
+                    placeholder={TempBook.Bookdescription}
                     type="numberic"
                     onChange={handleChange}
+                    //value={TempBook.Bookdescription}
                   ></Input>
                    {touched.Bookdescription && errors.Bookdescription? (
-            <div>{errors.Bookdescription}</div>
+            <div className="error">{errors.Bookdescription}</div>
           ) : (
             ""
           )}

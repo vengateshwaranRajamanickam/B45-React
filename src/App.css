@@ -57,7 +57,6 @@ justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-
 }
 .Authorcard{
   display: inline;
@@ -67,4 +66,7 @@ justify-content: center;
 }
 .Searchbar{
   height:fit-content;
+}
+.error{
+  color:red;
 }

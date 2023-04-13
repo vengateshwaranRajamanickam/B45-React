@@ -13,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Library />} />
           <Route path="/addbook" element={<Addbook />} />
+          <Route path="/addbook/:id" element={<Addbook />} />
         </Routes>
       </BrowserRouter>
     </Provider>

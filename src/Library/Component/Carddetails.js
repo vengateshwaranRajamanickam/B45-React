@@ -19,13 +19,13 @@ export default function Bookdetail({
     <>
       <Card className="Bookdetailcard m-4">
         <CardBody>
-          <CardTitle tag="h5">Book id:{details.id}</CardTitle>
+          <CardTitle tag="h5">Book id:{details.Bookid}</CardTitle>
           <CardSubtitle className="mb-2 ">
-          Book Name: {details.BookName}
+            Book Name: {details.BookName}
             <Button
               className="Deletefile"
               color="danger"
-              onClick={() => deletefile(details.id)}
+              onClick={() => deletefile(details.Bookid)}
             >
               Delete
             </Button>
@@ -39,7 +39,7 @@ export default function Bookdetail({
           </Container>
           <br />
         </CardBody>
-        <Button color="warning" onClick={() =>nav("./addbook/"+1)}>
+        <Button color="warning" onClick={() => nav("./addbook/" + details.id)}>
           Update Book Details
         </Button>
       </Card>

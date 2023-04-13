@@ -9,12 +9,12 @@ export default function Provider(props) {
   useEffect(() => {
     axios("https://63f4cd7a2213ed989c4ae285.mockapi.io/ap/v1/Library")
       .then((data) => {
-        tempbook = data.data.map(book => ({ ...book, id: uuidv4() }))
+        tempbook = data.data.map(book => ({ ...book, Bookid: uuidv4() }))
         setBookarray(tempbook);
       })
   }, []);
-  function DeleteBook(id) {
-    let index = Bookarray.findIndex((value) => value.id === id);
+  function DeleteBook(Bookid) {
+    let index = Bookarray.findIndex((value) => value.Bookid === Bookid);
     let temp = Bookarray.splice(index, 1);
      setShowdetail([]);
   }
@@ -27,17 +27,24 @@ if(name==""){
 
 }
 
-  function BookShow(id) {
-    if (id===0) {
+  function BookShow(Bookid) {
+    if (Bookid===0) {
        setShowdetail([]);
     } else {
-      let index = Bookarray.findIndex((value) => value.id === id);
-      let tempProd = Bookarray[index];
+      let temp = Bookarray.findIndex((value) => value.Bookid === Bookid);
+      let tempProd = Bookarray[temp];
        setShowdetail([tempProd]);
     }
   }
-  function CreateBook(value){
+  function CreateBook(value,id){
+    if(id){
+      let index = Bookarray.findIndex((value) => value.id === id);
+      Bookarray[index]=value;
+      setBookarray(Bookarray);
+      setShowdetail([]);
+    }
     setBookarray([...Bookarray,value])
+    setShowdetail([]);
   }
   return (
     <LibraryContext.Provider
