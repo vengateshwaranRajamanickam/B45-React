@@ -14,7 +14,7 @@ export default function Sliebar(){
 <hr class="sidebar-divider my-0"/>
 
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="./admin">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -30,7 +30,7 @@ export default function Sliebar(){
 
 {/*Nav Item - Pages Collapse Menu*/}
 <li class="nav-item">
-    <a class="nav-link collapsed" href="./Student" data-toggle="collapse" data-target="www.guvi.vomcollapseTwo"
+    <a class="nav-link collapsed" href="./" data-toggle="collapse" data-target="www.guvi.vomcollapseTwo"
         aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
         <span>Student</span>
