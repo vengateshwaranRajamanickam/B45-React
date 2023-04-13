@@ -3,11 +3,12 @@ import Card from "./Component/Card";
 import Carddetail from "./Component/Carddetails";
 import { Row, Col } from "reactstrap";
 import {LibraryContext} from "../Context";
-
+import Search from './Component/Search'
 export default function Student() {
   const {Bookarray, DeleteBook,BookShow,Showdetail}= useContext(LibraryContext);
   return (
     <Row className="Librarypage">
+      <Search/>
       <Col
         xs={12}
         sm={Showdetail.length === 0 ? 12 : 8}

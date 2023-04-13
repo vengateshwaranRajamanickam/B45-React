@@ -17,7 +17,7 @@ export default function Bookdetail({
   const nav=useNavigate();
   return (
     <>
-      <Card className="Bookdetailcard">
+      <Card className="Bookdetailcard m-4">
         <CardBody>
           <CardTitle tag="h5">Book id:{details.id}</CardTitle>
           <CardSubtitle className="mb-2 ">
@@ -43,7 +43,7 @@ export default function Bookdetail({
           Update Book Details
         </Button>
       </Card>
-      <Button className="mt-4" color="info" onClick={() => reset(0)}>
+      <Button className="m-4" color="info" onClick={() => reset(0)}>
         Back
       </Button>
     </>

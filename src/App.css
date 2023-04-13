@@ -8,8 +8,10 @@
 .Librarypage{
   background-image:url(https://png.pngtree.com/png-clipart/20190603/original/pngtree-creative-combination-of-library-books-logo-vector-material-png-image_126323.jpg);
   background-size:contain;
-  background-repeat:repeat-y;
-  
+  background-position: center;
+  background-repeat:round;
+  min-height: 100vh;
+  min-width: 100%;
 }
 .Bookcard{
   box-sizing: border-box;
@@ -50,14 +52,19 @@ justify-content: center;
   box-shadow: 1px 1px 5px 1px lightslategray;
 }
 .registerpage{
-  background-image:url(https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip);
-  background-size:contain;
+  background-image:url(https://png.pngtree.com/png-clipart/20190603/original/pngtree-creative-combination-of-library-books-logo-vector-material-png-image_126323.jpg);
+  background-size:cover;
   background-repeat: no-repeat;
-  background-position: 2rem 1rem;
+  background-position: center;
+  height: 100vh;
+
 }
 .Authorcard{
   display: inline;
 }
 .head{
   display: inline;
+}
+.Searchbar{
+  height:fit-content;
 }
