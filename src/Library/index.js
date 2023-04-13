@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Card from "./Component/Card";
 import Carddetail from "./Component/Carddetails";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import {LibraryContext} from "../Context";
 import Search from './Component/Search'
 export default function Student() {
@@ -16,12 +16,14 @@ export default function Student() {
       >
         {Bookarray.map((value, index) => (
           <>
-            <Card
+          <Container>
+             <Card 
               key={index}
               data={value}
               add={BookShow}
             />
             <br />
+            </Container>
           </>
         ))}
       </Col>
