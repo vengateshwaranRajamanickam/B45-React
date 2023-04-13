@@ -62,7 +62,7 @@ export default function AddBook() {
           <Container  className="registerpage">
             <Form  className="registerpageform">
             <FormGroup row>
-              <h3 className="BookListtitle mt-3">Library Book Management</h3>
+              <h3 className="BookListtitle mt-3">Add/Update Book Details</h3>
                 <Label for="Book Name"tag="h4" sm={2}>
                   Book Name
                 </Label>
