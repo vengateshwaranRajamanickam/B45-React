@@ -1,7 +1,7 @@
 import Slidebar from "./Slidebar";
 import Loginadmin from './Loginadmin'
-import { Row, Col,Container,Form,FormGroup,Label,Input} from "reactstrap"
-import Srmadvideo from './Launch into a bright future with SRM.mp4'
+import { Row, Col} from "reactstrap"
+
 export default function Admin() {
     return (
       <Row>

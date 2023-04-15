@@ -1,13 +1,11 @@
 import React, { useContext,useRef,useEffect} from "react";
 import {
-  Row,
   Col,
   Container,
   Label,
   Form,
   FormGroup,
   Input,
-  FormText,
   Button
 } from "reactstrap";
 import Context from "../Context";
@@ -25,7 +23,7 @@ export default function TeacherRegister() {
         <Form>
           <FormGroup row>
             <Label for="Teachername" sm={2}>
-              Teachername
+             <h5> Teachername</h5> 
             </Label>
             <Col sm={10}>
               <Input
@@ -42,7 +40,7 @@ export default function TeacherRegister() {
 
           <FormGroup row>
             <Label for="exampleText" sm={2}>
-              Teacher department
+            <h5>Teacher department </h5>  
             </Label>
             <Col sm={10}>
               <Input
@@ -57,7 +55,7 @@ export default function TeacherRegister() {
           </FormGroup>
           <FormGroup row>
             <Label for="exampleText" sm={2}>
-              Teacher id
+            <h5>  Teacher id  </h5> 
             </Label>
             <Col sm={10}>
               <Input

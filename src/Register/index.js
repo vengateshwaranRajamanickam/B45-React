@@ -23,7 +23,7 @@ const context = useContext(Context);
         <Form>
           <FormGroup row>
             <Label for="Name" sm={2}>
-              Name
+             <h5> Name</h5>
             </Label>
             <Col sm={10}>
               <Input
@@ -40,7 +40,7 @@ const context = useContext(Context);
           </FormGroup>
           <FormGroup row>
             <Label for="Student id" sm={2}>
-              Student id
+            <h5>  Student id  </h5>  
             </Label>
             <Col sm={10}>
               <Input
@@ -56,7 +56,7 @@ const context = useContext(Context);
 
           <FormGroup row>
             <Label for="exampleText" sm={2}>
-              Rank
+             <h5>   Rank </h5>
             </Label>
             <Col sm={10}>
               <Input

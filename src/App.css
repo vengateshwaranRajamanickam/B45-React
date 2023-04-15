@@ -534,3 +534,6 @@ z-index: 100;
     background-color:transparent;
     border:none;
   }
+  .error{
+    color:red;
+  }
