@@ -2,7 +2,7 @@ import React from 'react'
 import {Container} from 'reactstrap'
 export default function Sliebar(){
     return (
-       
+<div class="sidebarcontainer container-fluid">    
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./Student">
@@ -114,6 +114,6 @@ export default function Sliebar(){
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
 </div>
 </ul>
-
+</div> 
     )
 }

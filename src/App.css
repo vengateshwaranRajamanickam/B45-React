@@ -490,4 +490,47 @@ justify-content: center;
 .sidebar-dark.toggled #sidebarToggle::after {
   color: rgba(31, 0, 0, 0.5);
 }
+.sidebarcontainer{
+margin: 0px;
+max-height: fit-content;
+}
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:auto;
+  position:relative;
+}
+.overlay{
+position:absolute;
+height:fit-content;
+max-width:fit-content;
+top:40px;
+bottom:0;
+z-index:1;
+}
+video{
+  position: absolute;
+  min-width: 500px;
+    max-width:1100px;
+    min-height: 400px;
+    max-height:700px;
+ left: 0;
+  }
+  .Login
+  {position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-items: center;
+max-width: fit-content;
+max-height: fit-content;
+z-index: 100;
 
+  }
+.input{
+    background-color:transparent;
+    border:none;
+  }
