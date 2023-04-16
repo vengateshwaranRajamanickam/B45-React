@@ -537,3 +537,39 @@ z-index: 100;
   .error{
     color:red;
   }
+  
+.button{
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  cursor:pointer;
+  border: none;
+  box-shadow: 2px 2px 5px;
+  font-weight: bold;
+  min-height: 2rem;
+  
+}
+/*popup*/
+.pop{
+  position: absolute;
+  visibility: hidden;
+   transform: translate(-150%,-260%)scale(0.1);
+   margin:3px 5px 3px 5px;
+   display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   transition: transform(0.4s),top 0.4s;
+   z-index: 10;
+}
+.openpop{
+  visibility: visible;
+  transform: translate(20%,20%)scale(1);
+top: 10%;
+left:30%;
+}
+.pop img{
+  box-shadow:2px 2px 5px ;
+  max-width: 500px;
+  max-height: 500px;
+ cursor: pointer;
+}

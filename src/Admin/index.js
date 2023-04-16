@@ -10,7 +10,7 @@ export default function Admin() {
         sm={3}
         md={3}
       >
-<Slidebar/>
+<Slidebar/> 
 </Col> 
 <Col
         xs={6}
