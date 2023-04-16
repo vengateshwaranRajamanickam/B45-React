@@ -28,13 +28,13 @@ const context = useContext(Context);
     }
     if (!values.studentid) {
       errors.studentid = "Studentid Name is Required";
-    } else if (values.studentid.length <5) {
+    } else if (values.studentid<5) {
       errors.studentid = "Studentid Name should have min length 5";
     }
     if (!values.rank) {
       errors.rank = "rank is Required";
     }
-      else if (values.rank.length <3) {
+      else if (values.rank <3) {
       errors.rank = "rank should have min length 3";
     } 
     return errors;

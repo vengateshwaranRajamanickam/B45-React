@@ -33,7 +33,7 @@ export default function TeacherRegister() {
     }
     if (!values.teacherid) {
       errors.teacherid = "Teacherid is Required";
-    }else if (values.teacherid.length <3) {
+    }else if (values.teacherid <3) {
     errors.teacherid = "Teacherid should have min length 3";
     } 
     return errors;
