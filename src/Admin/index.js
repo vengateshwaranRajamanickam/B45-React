@@ -1,18 +1,20 @@
 import Slidebar from "./Slidebar";
 import Loginadmin from './Loginadmin'
-import { Row, Col} from "reactstrap"
+import { Row, Col, Container} from "reactstrap"
 
 export default function Admin() {
     return (
-      <Row>
-  <Col
+      
+      <Container className="form">
+      <Row >
+  <Col 
         xs={6}
         sm={3}
         md={3}
       >
 <Slidebar/> 
 </Col> 
-<Col
+<Col 
         xs={6}
         sm={3}
         md={3}
@@ -20,5 +22,6 @@ export default function Admin() {
  <Loginadmin/>
       </Col> 
       </Row>
+      </Container>
     )
 }

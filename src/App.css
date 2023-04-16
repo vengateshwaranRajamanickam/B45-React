@@ -504,8 +504,8 @@ justify-content: center;
   color: rgba(31, 0, 0, 0.5);
 }
 .sidebarcontainer{
-margin: 0px;
-max-height: fit-content;
+padding:0;
+max-height: 600px;
 }
 .home{
   display: flex;
@@ -518,7 +518,7 @@ max-height: fit-content;
 position:absolute;
 height:fit-content;
 max-width:fit-content;
-top:40px;
+top:70px;
 bottom:0;
 z-index:1;
 }

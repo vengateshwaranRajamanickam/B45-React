@@ -19,7 +19,7 @@ export default function Loginadmin() {
   };
 
     return (
-      <Formik className="registerpage"
+      <Formik className="registerpage "
       initialValues={{
         adminid: "",
         adminPassword: "",

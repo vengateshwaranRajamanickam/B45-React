@@ -8,17 +8,17 @@ export default function Student() {
   const context = useContext(Context);
 
   return (
-    <>
-    <div class="pop" id="pop" onClick={context.closepop} >
-    {
-        setTimeout(()=>{
-          let pop=document.getElementById("pop")
-          pop.classList.add("openpop")
-        },2000)
-      }
-        <img src={Ad1} alt="admissionad" title="admissionad"/>
-        <Button class="button" type="button" >Check our college website for more details </Button>
-    </div>
+     <>
+     <div class="pop openpop" id="pop" onClick={context.closepop} >
+     {
+    //     setTimeout(()=>{
+    //       let pop=document.getElementById("pop")
+    //       pop.classList.add("openpop")
+    //     },2000)
+     }
+         <img src={Ad1} alt="admissionad" title="admissionad"/>
+         <Button class="button" type="button" >Check our college website for more details </Button>
+     </div>
     
     <Row className="studentpage">
       <Col
