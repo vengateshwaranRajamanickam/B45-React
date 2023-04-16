@@ -10,13 +10,9 @@ function App() {
   let initialvalue = {prevdata:"", nextdata:"",temp:""};
   const [state, dispatch] = useReducer(Reducer, initialvalue)
   return (
-    
-    <Calc.Provider value={{state, dispatch}}>
-      
+      <Calc.Provider value={{state, dispatch}}>
       <Displaycalc />
-     
-      </Calc.Provider>
-    
+     </Calc.Provider>
   );
 }
 
