@@ -3,19 +3,12 @@ import Context from "./Context";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from 'axios'
-let initialValue = {
-  name: "",
-  rank: 0,
-  studentid: 0,
-  teachername: "",
-  teacherdepartment: "",
-  teacherid:0
-};
+import { ToastContainer, toast } from 'react-toastify';
+
 export default function Provider(props) {
   const [inputarray, setinputarray] = useState([]);
   const [UserStudent, setUserStudent] = useState([]);
   const [UserTeacher, setUserTeacher] = useState([]);
-  const [formData, setFormData] = useState(initialValue);
   useEffect(() => {
     axios("https://640f08d74ed25579dc43acce.mockapi.io/amazon")
       .then((data) => {
@@ -37,20 +30,16 @@ export default function Provider(props) {
     let temp = UserTeacher.splice(index, 1);
     setinputarray([]);
   }
-  function StudentCreatedetail() {
-    setUserStudent([...UserStudent, formData]);
+  function StudentCreatedetail(value) {
+    setUserStudent([...UserStudent, value]);
+    return  toast.success("Accepted")     
   }
-  function TeacherCreatedetail() {
-    setUserTeacher([...UserTeacher, formData]);
+  function TeacherCreatedetail(value) {
+    setUserTeacher([...UserTeacher, value]);
+    return  toast.success("Accepted")  
   }
 
-  function handleChange(e) {
-    if (e.target.type === "number") {
-      setFormData({ ...formData, [e.target.name]: parseInt(e.target.value) });
-    } else {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
-  }
+
   function StudentUpdatedetail(data) {
     let index = UserStudent.findIndex((value) => value.id === data.id);
     let tempProd = UserStudent;
@@ -82,9 +71,14 @@ export default function Provider(props) {
       setinputarray([tempProd]);
     }
   }
+  function closepop(){
+    let ppop=document.getElementById("pop")
+      ppop.classList.remove("openpop")
+  }
   return (
     <Context.Provider
       value={{
+        closepop,
         TeacherShowdetail,
         TeacherDeletedetail,
         TeacherUpdatedetail,
@@ -96,7 +90,7 @@ export default function Provider(props) {
         StudentCreatedetail,
         StudentShowdetail,
         StudentUpdatedetail,
-        handleChange
+        
       }}
     >
       {props.children}

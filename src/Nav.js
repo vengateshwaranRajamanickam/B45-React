@@ -9,7 +9,7 @@ import {
 
 export default function NavTopbar() {
   return (
-    <Nav tabs>
+    <Nav tabs className='Navbar'>
       <NavItem>
       <NavLink><Link  to="/">Student</Link>
       </NavLink>
