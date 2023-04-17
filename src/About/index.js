@@ -1,22 +1,22 @@
 import React from 'react'
 import image from '../Image/pop.png'
-import './TopContainer.css'
+import './About.css'
 import { Element } from 'react-scroll'
 function About() {
     return (
         <Element>
-            <div className='row topContainer ' id="About">
-                <div className='cardimage col-lg-4 col-md-6 col-xs-6 topContainerimage'>
+            <div className='row about' id="About">
+                <div className='cardimage col-lg-4 md-6 sm-10 xs-12 aboutimage'>
                     <img src={image} alt="vengateshwaran" title='vengateshwaran' />
                 </div>
-
-                <div className='col-lg-6 col-md-12 col-xs-12 topContainerdetail'>
+                <div className='col-lg-6 md-8 sm-10 xs-12 aboutdetail'>
                     <div class="animation">
                         <p >Mr.vengatesh</p>
                         <p >Full Stack Mern Developer</p>
+                        <p>Developed and maintained scalable and efficient web applications using
+React.js, Node.js, and MongoDB</p>
                     </div>
-                    <button className='topContent_button'>Download Cv</button>
-                    <a href='www.google.com' alt="fs">dfds</a>
+                    <button className='cv_download_button'>Download Cv</button>
                 </div>
             </div>
         </Element>

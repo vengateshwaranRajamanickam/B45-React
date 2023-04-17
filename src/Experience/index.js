@@ -7,7 +7,6 @@ function Experience() {
   var myNumber = 0;
 const yearexperience=setInterval(()=>{
   myNumber++;
-  console.log(myNumber)
   if (myNumber<6) {
       document.getElementById('myNumber').innerHTML = myNumber+"+";
   } else {
@@ -17,17 +16,32 @@ const yearexperience=setInterval(()=>{
 
   return (
     <Element>
-      <Row className='Experience_Container'>
-     <Col lg={5} md={7} xs={12}>
+      <Row className='Experience_Container' id="Experience">
+      <Col lg={1} md={1} sm={1}>
       <Card
-        className="teachercard"
+       className='yearexperience_card'
+        style={{
+          border: "none"
+        }}
+      >
+        <CardBody>
+          <CardTitle tag="h5">
+           Experience
+          <span className="yearexperience" id="myNumber" data-to-value="10" data-from-value="0" ></span>
+          </CardTitle>
+        </CardBody>
+      </Card>
+      </Col>
+     <Col  lg={5} md={7} sm={9}>
+      <Card
+        className="Exp_Card"
         style={{
           border: "none"
         }}
       >
         <CardBody>
           <CardTitle tag="h5" className='Exp_CardTitle'>
-          <div className='Exp_CardTitle_Name'>MultilevelTechnologies, Abu dhabi </div> <div className='Exp_CardTitle_Year'>Oct 2019 - Nov 2022</div>
+          <div className='Exp_CardTitle_Name'>MultilevelTechnologies, Abu dhabi </div> <div className='Exp_CardTitle_Year'>2019 - 2022</div>
           </CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
           Project Coordinator
@@ -42,24 +56,10 @@ const yearexperience=setInterval(()=>{
 </CardBody>
 </Card>
       </Col>
-      <Col lg={1} md={1} xs={1}>
-      <Card
-       className='yearexperience_card'
-        style={{
-          border: "none"
-        }}
-      >
-        <CardBody>
-          <CardTitle tag="h5">
-           Experience
-          <span class="yearexperience" id="myNumber" data-to-value="10" data-from-value="0" ></span>
-          </CardTitle>
-        </CardBody>
-      </Card>
-      </Col>
-      <Col lg={5} md={7} xs={12}>
+      
+      <Col  lg={5} md={7} sm={9}>
     <Card
-        className="teachercard"
+        className="Exp_Card"
         style={{
           border: "none"
         }}

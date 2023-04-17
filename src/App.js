@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react'
-import CVHeader from './Header1'
+import Header from './Header'
 import About from './About'
 import Skills from './Skills'
 import Certification from './Certification';
@@ -11,7 +11,7 @@ import Certification from './Certification';
 function App() {
   return (
     <>
-      <CVHeader />
+      <Header />
       <About />
       <Skills />
       <Certification />

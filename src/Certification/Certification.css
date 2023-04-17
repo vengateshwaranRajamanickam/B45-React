@@ -1,9 +1,36 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap:5px;
+.Certification{
+  background-color:azure;
+  margin:0px;
 }
-
+.iosswitch{
+  width:100%;
+  place-content: center ;
+}
+.grid-container{
+    margin:0px 20px;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap:5px;
+}
+.Card{
+  border:none;
+  margin:30px;
+  padding: 3px;
+}
+.image{
+ background-size:auto;
+ bottom:0;
+}
+.Card:hover{
+  transform: scale(1.2);
+  background-color:antiquewhite;
+}
+.CardTitle{
+  text-align: center;
+}
+.CardLink{
+  text-decoration: none;
+}
 .yellow{
     color:yellow;
 }
@@ -19,3 +46,25 @@
 .Card_List{
    color: black;
 }
+
+@media screen and (width< 980px) {
+    .grid-container{
+       display: grid;
+       grid-template-columns: auto auto auto auto ;
+       gap:5px;
+     }
+   }
+@media screen and (width<780px) {
+  .grid-container{
+     display: grid;
+    grid-template-columns: auto auto auto;
+    gap:5px;
+  }
+}
+@media screen and (width<580px) {
+ .grid-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap:5px;
+  }
+} 
