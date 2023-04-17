@@ -1,0 +1,44 @@
+
+    .teachercard{
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: fit-content;
+        box-shadow: 0px 0px 0px 1px lightslategray;
+        margin-top: 2rem;
+      }
+      .teachercard:hover{
+        box-shadow: 2px 2px 5px 1px lightslategray;
+      }
+      .Exp_CardTitle{
+        display: flex;
+      }
+      .Exp_CardTitle_Name{
+        float: left;
+        
+      }
+      .Exp_CardTitle_Year{
+        float: right;
+        right: 0;
+      }
+      .yearexperience{
+        background-color: aqua;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .yearexperience_card{
+        box-sizing: border-box;
+        border-radius: 3px;
+        width:fit-content;
+        height:fit-content;
+        padding: 0;
+        box-shadow: 0px 0px 0px 1px lightslategray;
+        margin-top: 2rem;
+      }
+      .yearexperience_card:hover{
+        box-shadow: 2px 2px 5px 1px lightslategray;
+      }
+      .Experience_Container{
+        display: flex;
+      }
