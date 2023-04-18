@@ -3,8 +3,10 @@
         box-sizing: border-box;
         border-radius: 3px;
         width: fit-content;
+        height:fit-content;
         box-shadow: 0px 0px 0px 1px lightslategray;
-        margin-top: 2rem;
+        margin: 2rem;
+        padding: 3px;
       }
       .Exp_Card:hover{
         box-shadow: 2px 2px 5px 1px lightslategray;
@@ -32,10 +34,9 @@
         box-sizing: border-box;
         border-radius: 3px;
         width:fit-content;
-        height:fit-content;
-        padding: 0;
+        padding: 3px;
         box-shadow: 0px 0px 0px 1px lightslategray;
-        margin-top: 2rem;
+        margin: 2rem;
       }
       .yearexperience_card:hover{
         box-shadow: 2px 2px 5px 1px lightslategray;
@@ -43,4 +44,22 @@
       .Experience_Container{
        margin:0px;
        background-color:azure;
+       display:grid;
+       grid-template-columns: repeat(3,auto);
       }
+@media screen and (width< 980px) {
+  .Experience_Container{
+     display: grid;
+     grid-template-columns: auto auto  ;
+     gap:5px;
+   }
+ }
+@media screen and (width<780px) {
+.Experience_Container{
+   display: grid;
+  grid-template-columns: auto ;
+  gap:5px;
+}
+
+    }
+  

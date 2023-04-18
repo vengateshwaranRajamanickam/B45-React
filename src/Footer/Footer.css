@@ -1,0 +1,26 @@
+.Footer{
+    background-color: azure;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height:fit-content;
+    margin: 0px;
+}
+.Footer_Contact{
+    background-color: azure;
+    font-weight: bold;
+    text-align: center;
+}
+.Footer_Container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 30px;
+    margin:30px;
+}
+.Footer_anchor{
+text-decoration: none;
+}

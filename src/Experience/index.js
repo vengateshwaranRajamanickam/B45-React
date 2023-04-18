@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Experience.css'
 import { Element } from 'react-scroll'
-import {List,Row,Card,CardBody,CardTitle,Col,CardText,CardSubtitle} from 'reactstrap'
+import {List,Row,Card,CardBody,CardTitle,Col,CardText,CardSubtitle, Container} from 'reactstrap'
 
 function Experience() {
   var myNumber = 0;
@@ -16,23 +16,19 @@ const yearexperience=setInterval(()=>{
 
   return (
     <Element>
-      <Row className='Experience_Container' id="Experience">
-      <Col lg={1} md={1} sm={1}>
+      <Container className='Experience_Container' id="Experience">
       <Card
        className='yearexperience_card'
         style={{
-          border: "none"
+          height:150
         }}
-      >
-        <CardBody>
+      >   <CardBody>
           <CardTitle tag="h5">
            Experience
           <span className="yearexperience" id="myNumber" data-to-value="10" data-from-value="0" ></span>
-          </CardTitle>
-        </CardBody>
+          </CardTitle>  
+     </CardBody>
       </Card>
-      </Col>
-     <Col  lg={5} md={7} sm={9}>
       <Card
         className="Exp_Card"
         style={{
@@ -55,9 +51,6 @@ const yearexperience=setInterval(()=>{
 </CardText>
 </CardBody>
 </Card>
-      </Col>
-      
-      <Col  lg={5} md={7} sm={9}>
     <Card
         className="Exp_Card"
         style={{
@@ -78,8 +71,8 @@ const yearexperience=setInterval(()=>{
           </CardText>
         </CardBody>
       </Card>
-      </Col>
-      </Row>
+      {/* </Col> */}
+      </Container>
     </Element>
   )
 }

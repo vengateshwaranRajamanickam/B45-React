@@ -48,24 +48,24 @@
    color: black;
 }
 
-@media screen and (width< 980px) {
+@media screen and (width< 1140px) {
     .grid-container{
        display: grid;
-       grid-template-columns: auto auto auto auto ;
+       grid-template-columns: auto auto auto ;
        gap:5px;
      }
    }
-@media screen and (width<780px) {
+@media screen and (width<980px) {
   .grid-container{
      display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     gap:5px;
   }
 }
 @media screen and (width<580px) {
  .grid-container{
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto ;
     gap:5px;
   }
 } 

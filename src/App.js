@@ -5,9 +5,9 @@ import Header from './Header'
 import About from './About'
 import Skills from './Skills'
 import Certification from './Certification';
-// import Education from './Education'
+import Education from './Education'
  import Experience from './Experience'
-// import Footer from './Footer'
+import Footer from './Footer'
 function App() {
   return (
     <>
@@ -16,6 +16,8 @@ function App() {
       <Skills />
       <Certification />
       < Experience/>
+      <Education/>
+      <Footer/>
     </>
   );
 }
