@@ -53,3 +53,19 @@
     justify-content: center;
     align-items: center;
 }
+.cardimage{
+    position: relative;
+    left: 0;
+    animation-name: move-left;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+  @keyframes move-left {
+    from {
+      left: 0;
+    }
+    to {
+      left: 30px;
+    }
+  }
