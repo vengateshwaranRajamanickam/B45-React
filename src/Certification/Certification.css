@@ -1,18 +1,21 @@
 .Certification{
-  background-color:azure;
+  background-color:rgb(245, 248, 248);
   margin:0px;
+  height: 80vh;
 }
 .iosswitch{
   width:100%;
   place-content: center ;
 }
 .grid-container{
-    margin:0px 20px;
+    margin:20px 20px;
     display: grid;
-    grid-template-columns: repeat(5,auto);
+    grid-template-columns: repeat(3,auto);
     grid-gap:5px;
+    justify-content: center;
+    
 }
-/**/
+/* Card*/
 .Card{
   border:none;
   margin:30px;
@@ -23,7 +26,7 @@
  bottom:0;
 }
 .Card:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color:antiquewhite;
 }
 .CardTitle{

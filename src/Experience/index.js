@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Experience.css'
 import { Element } from 'react-scroll'
-import {List,Row,Card,CardBody,CardTitle,Col,CardText,CardSubtitle, Container} from 'reactstrap'
+import {List,Card,CardBody,CardTitle,CardText,CardSubtitle, Container} from 'reactstrap'
 
 function Experience() {
   var myNumber = 0;

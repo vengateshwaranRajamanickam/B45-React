@@ -1,5 +1,5 @@
 .Footer{
-    background-color: azure;
+    background-color: rgb(245, 248, 248);
      display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     margin: 0px;
 }
 .Footer_Contact{
-    background-color: azure;
+    background-color:rgb(245, 248, 248);
     font-weight: bold;
     text-align: center;
 }
