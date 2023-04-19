@@ -10,7 +10,11 @@ import tile from '../Image/TileMatch.png'
 import tictactoe from '../Image/TicTacToe.png'
 function Certification() {
   const [ios, setios] = useState(true);
-  const [showcard, setshowcard] = useState(true);
+  const [showcard1, setshowcard1] = useState(true);
+  const [showcard2, setshowcard2] = useState(true);
+  const [showcard3, setshowcard3] = useState(true);
+  const [showcard4, setshowcard4] = useState(true);
+  const [showcard5, setshowcard5] = useState(true);
   //ios switch
   const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -68,14 +72,14 @@ function Certification() {
     <Element>
       <div className='Certification' id="Certification">
         <FormControlLabel
-          control={<IOSSwitch sx={{ m: 1 }} defaultChecked={ios ? true : false} onChange={() => setios(!ios)} />}
-          label={ios ? "Project" : "Certification"} className='iosswitch'
+          control={<IOSSwitch sx={{ m: 1 }} defaultChecked={ios===true? true : false}  />}
+          label={ios?"Project" :"Certification"} className='iosswitch' onChange={() => setios(!ios)}
         />
         {
           ios ?
             (
               <div className='grid-container'>
-                <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                <Card className='Card' onMouseEnter={() => setshowcard1(false)} onMouseLeave={() => setshowcard1(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -83,7 +87,7 @@ function Certification() {
                   <CardTitle tag="h5" className='CardTitle'>
                     Student Teacher Management
                   </CardTitle>
-                  {showcard ? (<img className='image'
+                  {showcard1 ? (<img className='image'
                     alt="Card cap"
                     src={studentteacher}
                     accept="image/.jpg"
@@ -101,7 +105,7 @@ function Certification() {
                     </CardLink>
                   </CardBody>)}
                   </Card>
-                <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                <Card className='Card' onMouseEnter={() => setshowcard2(false)} onMouseLeave={() => setshowcard2(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -111,7 +115,7 @@ function Certification() {
                   Match 
                   </CardTitle>
                  
-                  {showcard ? (<img className='image'
+                  {showcard2 ? (<img className='image'
                     alt="Card cap"
                     src={tile}
                     accept="image/.jpg"/>) : (<CardBody>
@@ -128,7 +132,7 @@ function Certification() {
                     </CardLink>
                   </CardBody>)}
                   </Card>
-                <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                <Card className='Card' onMouseEnter={() => setshowcard3(false)} onMouseLeave={() => setshowcard3(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -137,7 +141,7 @@ function Certification() {
                   Tic Tac Toe Game
                   </CardTitle>
                   
-                  {showcard ? (<img className='image'
+                  {showcard3 ? (<img className='image'
                     alt="Card cap"
                     src={tictactoe}
                     accept="image/.jpg"
@@ -155,7 +159,7 @@ function Certification() {
                     </CardLink>
                   </CardBody>)}
                   </Card>
-                  <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                  <Card className='Card' onMouseEnter={() => setshowcard4(false)} onMouseLeave={() => setshowcard4(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -164,7 +168,7 @@ function Certification() {
                     Check Weather Api 
                   </CardTitle>
                  
-                  {showcard ? (<img className='image'
+                  {showcard4 ? (<img className='image'
                     alt="Card cap"
                     src={studentteacher}
                     accept="image/.jpg"
@@ -181,7 +185,7 @@ function Certification() {
                     </CardLink>
                   </CardBody>)}
                    </Card>
-                <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                <Card className='Card' onMouseEnter={() => setshowcard5(false)} onMouseLeave={() => setshowcard5(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -190,7 +194,7 @@ function Certification() {
                     Abi dates e-commerce
                   </CardTitle>
                 
-                  {showcard ? (<img className='image'
+                  {showcard5 ? (<img className='image'
                     alt="Card cap"
                     src={studentteacher}
                     accept="image/.jpg"
@@ -209,7 +213,7 @@ function Certification() {
                  </Card>
               </div>) : (
               <div className='grid-container'>
-                <Card className='Card' onMouseEnter={() => setshowcard(false)} onMouseLeave={() => setshowcard(true)}
+                <Card className='Card' onMouseEnter={() => setshowcard1(false)} onMouseLeave={() => setshowcard1(true)}
                   style={{
                     width: '15rem'
                   }}
@@ -217,7 +221,7 @@ function Certification() {
                   <CardTitle tag="h5"className='CardTitle'>
                     Student Teacher Management
                   </CardTitle>
-                  {showcard ? (<img className='image'
+                  {showcard1 ? (<img className='image'
                     alt="Card cap"
                     src={studentteacher}
                     accept="image/.jpg"
@@ -225,14 +229,12 @@ function Certification() {
                     <CardText className='CardText'>
                       <List>
                         <li className='darkblue'><div className='Card_List'>html</div></li>
-                        {/* <li className='success'><span className='Card_List'>CSS</span></li>
-                        <li className='blue'><span className='Card_List'>JavaScript</span></li>
-                        <li className='yellow'><span className='Card_List'>React</span></li> */}
+                       
                       </List>
                     </CardText>
-                    <CardLink className='CardLink' ref="https://relaxed-bublanina-73046d.netlify.app/">
-                    Open Project
-                    </CardLink>
+                
+                   
+                    
                   </CardBody>)}
                   </Card>
               </div>
