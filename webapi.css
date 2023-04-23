@@ -1,0 +1,51 @@
+body{
+    background-color: darkcyan;
+}
+h2{
+    text-align: center;
+    text-shadow: 2px 2px 5px yellow;
+}
+.selectcountries{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.selectcountries span{
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.weather .card-title{
+    color:chocolate;
+    font-weight: 500;
+}
+.weather_details span{
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin:10px;
+   font-size: medium;
+}
+.weather_details i{
+    font-weight: 700;
+    font-size: xx-large;
+    margin:10px 10px;
+}
+.weather,.country{
+    display: none;
+    background-color: cornsilk; 
+}
+.showweather,.showcountry{
+    display: block;
+}
+.card_container{
+    margin:30px;
+    padding:10px;
+}
+.card-button{
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 3px red;
+}
