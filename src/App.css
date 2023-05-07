@@ -1,0 +1,46 @@
+
+.error{
+  color:red;
+  font-size: small;
+}
+.login_button,.reset_button{
+padding: 0 10px 0 10px;
+border-radius: 10px;
+cursor:pointer;
+border: none;
+box-shadow: 2px 2px 5px;
+font-weight: bold;
+min-height: 2rem;
+}
+.logincontainer,.resetcontainer{
+background-color:rgb(228, 220, 212);
+margin:auto;
+display: flex;
+align-items: center;
+justify-content:center;
+/* place-items:center; */
+padding:10px;
+letter-spacing: 1px;
+width:300px;
+}
+.input,.login_button,.forgot_password{
+margin:10px;
+}
+.input{
+outline: none;
+width:250px;
+}
+.forgot_password{
+font-size: small;
+font-style: italic;
+}
+.home{
+margin:10% 0px;
+}
+/*forgot password*/
+.pagetitle{
+font-size: x-large;
+font-weight: 300;
+text-align: center;
+}
+
