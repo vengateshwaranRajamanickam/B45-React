@@ -37,7 +37,7 @@ export default function Forgotpassword() {
         .catch(err => toast.error(`${err.message}`))
     }
     return (
-        <div className='pagetitle'>Forgotpassword
+        <div className='pagetitle'>verification 
             <Container className="home">
                 <Formik
                     initialValues={{
